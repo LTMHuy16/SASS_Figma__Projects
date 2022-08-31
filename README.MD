@@ -12,10 +12,10 @@
 
 ## INSTALL CSSCOMB TO ORDER CSS PROPERTIES
 
-> npm i csscomb (global or local)
+    npm i csscomb (global or local)
 
-> csscomb -c .csscomb.json (with global)
+    csscomb -c .csscomb.json (with global)
 
-> add *npm run* to pakage.json to start
+    add *npm run* to pakage.json to start
 
-> css + file SCSS (file CSS)
+    css + file SCSS (file CSS)
