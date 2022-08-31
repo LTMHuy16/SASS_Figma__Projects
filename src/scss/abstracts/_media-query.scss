@@ -1,0 +1,26 @@
+@mixin mq($viewports, $type: min, $dir: width)
+{
+    $min: min-#{$dir};
+    $max: max-#{$dir};
+
+    @if (type-of($viewports) == number)
+    {
+
+        @if $type == max
+        {
+            $viewports: $viewports - 1;
+        }
+
+        @media screen and (#{$type}-#{$dir}: $viewports)
+        {
+            @content;
+        }
+    } @else
+    {
+
+        @media screen and ($min: nth($viewports, 1)) and ($max: (nth($viewports, 2) - 1))
+        {
+            @content;
+        }
+    }
+}

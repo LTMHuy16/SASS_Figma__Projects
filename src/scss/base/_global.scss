@@ -1,0 +1,27 @@
+html
+{
+    font-size: 62.5%;
+}
+
+body
+{@include font-size(16);
+
+    font-family: $font-body;
+    font-weight: $font-body-weight;
+}
+
+a
+{
+    color: $color-link;
+}
+
+picture
+{
+    display: block;
+    font-size: 0;
+}
+
+img
+{
+    width: 100%;
+}

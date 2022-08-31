@@ -1,0 +1,57 @@
+//========= GRID SYSTEM ============
+
+$grid-columns: 12;
+$grid-spacing-small: .625rem; // 20px / 2
+$grid-spacing-wide: .625rem; // 20px / 2
+
+$grid-max-width: 68.75rem; // 1100px
+
+//========= COLORS ============
+
+$color-main: #22c55e;
+$color-title: #2a3342;
+$color-subtitle: #8896ab;
+$color-link: #8896ab;
+$color-text-light: #fff;
+$color-text-dark: #556987;
+$color-bg-light: #f7f8f9;
+$color-bg-dark: #2a3342;
+$bg-button: $color-main;
+$bg-button-second: #fff;
+$color-border: #d5dae1;
+
+//========= FONTS ============
+
+$font-body: 'Poppins', sans-serif;
+$font-title: $font-body;
+$font-body-weight: 500;
+
+//========= BREKPOINTS ============
+
+$sm: 480px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1200px;
+$xxl: 1440px;
+
+// breakpoints to render grid system
+$breakpoints: (
+    'sm': $sm,
+    'md': $md,
+    'lg': $lg,
+    'xl': $xl,
+    'xxl': $xxl,
+);
+
+//========= Z-INDEX ============
+
+
+
+
+//========= IMAGE RATIO ============
+$ratio--16-9: 16 / 9;
+$ratio--16-9: 4 / 3;
+$ratio--16-9: 1;
+
+//========= BASE TRANSITION ============
+$transition: .4s ease;

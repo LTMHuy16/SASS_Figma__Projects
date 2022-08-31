@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+h1, h2, h3, h4, h5, h6
+{
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: $color-title;
+    font-family: $font-title;
+    line-height: 1.1;
+}
+
+h1, .h1
+{
+    @include font-size(40);@include mq($lg)
+    {
+        @include font-size(60);
+    }
+}
+
+h2, .h2
+{
+    @include font-size(28);@include mq($lg)
+    {
+        @include font-size(48);
+    }
+}
+
+h3, .h3
+{
+    @include font-size(20);@include mq($lg)
+    {
+        @include font-size(36);
+    }
+}
+
+h4, .h4
+{
+    @include font-size(24);@include mq($lg)
+    {
+        @include font-size(24);
+    }
+}
+
+.text
+{
+    &-dark
+    {
+        color: $color-text-dark;
+    }
+
+    &-light
+    {
+        color: $color-text-light;
+    }
+
+    &-center
+    {
+        text-align: center;
+    }
+
+    &-left
+    {
+        text-align: left;
+    }
+
+    &-right
+    {
+        text-align: right;
+    }
+}
