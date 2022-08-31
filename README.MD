@@ -16,6 +16,6 @@
 
     csscomb -c .csscomb.json (with global)
 
-    add *npm run* to pakage.json to start
+    add npm run to pakage.json to start
 
     css + file SCSS (file CSS)
