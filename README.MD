@@ -18,4 +18,4 @@
 
     add npm run to pakage.json to start
 
-    css + file SCSS (file CSS)
+    csscomb + file SCSS (file CSS)
