@@ -1,13 +1,16 @@
-@mixin font-size($font-size, $line-height: null) {
+@mixin font-size($font-size, $line-height: null)
+{
     font-size: $font-size + px;
     font-size: ($font-size / 10) + rem;
 
-    @if ($line-height != null) {
+    @if ($line-height != null)
+    {
         line-height: $line-height;
     }
 }
 
-@mixin truncate-text($max-width, $max-lines) {
+@mixin truncate-text($max-width, $max-lines)
+{
     display: -webkit-box;
     overflow: hidden;
     -webkit-box-orient: vertical;
@@ -17,34 +20,41 @@
     -webkit-line-clamp: $max-lines;
 }
 
-@mixin responsive-ratio($number, $pseudo: false) {
-    $padding: unquote((number) * 100 + "%");
+@mixin responsive-ratio($number, $pseudo: false)
+{
+    $padding: unquote((number) * 100 + '%');
 
-    @if $pseudo {
-        &:before {
+    @if $pseudo
+    {
+        &:before
+        {
             @include pseudo($pos: relative);
 
             width: 100%;
             padding-top: $padding;
         }
-    } @else {
+    } @else
+    {
         padding-top: $padding;
     }
 }
 
-@mixin image-2x($image, $width, $height) {
+@mixin image-2x($image, $width, $height)
+{
     @media only screen and (-webkit-min-device-pixel-ratio: 2),
-        only screen and (min--moz-device-pixel-ratio: 2),
-        only screen and (min-device-pixel-ratio: 2),
-        only screen and (-webkit-min-device-pixel-ratio: 2),
-        only screen and (min-resolution: 192dpi),
-        only screen and (min-resolution: 2dppx) {
-            background-image: url($image);
-            background-size: $width $height;
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx)
+    {
+        background-image: url($image);
+        background-size: $width $height;
     }
 }
 
-@mixin opacity($opacity) {
+@mixin opacity($opacity)
+{
     opacity: $opacity;
     filter: alpha(opacity=($opacity * 100));
 }
