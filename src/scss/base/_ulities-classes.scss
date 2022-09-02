@@ -1,0 +1,51 @@
+/* SPACING */
+.relative {
+    position: relative;
+}
+
+.mx-auto {
+    margin: 0 auto;
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
+.mr-auto {
+    margin-right: auto;
+}
+
+.my-auto {
+    margin: auto 0;
+}
+
+.pb-90 {
+    padding-bottom: $section-padding-bottom;
+}
+
+.pt-90 {
+    padding-top: $section-padding-top;
+}
+
+.pb-base {
+    padding-bottom: $padding-bottom-base;
+}
+
+.pt-base {
+    padding-bottom: $padding-top-base;
+}
+
+/* BACKGROUND COLOR */
+
+.bg-main {
+    background-color: $color-main;
+}
+
+
+/* BOX  */
+
+.cycle-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}

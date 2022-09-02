@@ -39,12 +39,29 @@
         only screen and (-webkit-min-device-pixel-ratio: 2),
         only screen and (min-resolution: 192dpi),
         only screen and (min-resolution: 2dppx) {
-            background-image: url($image);
-            background-size: $width $height;
+        background-image: url($image);
+        background-size: $width $height;
     }
 }
 
 @mixin opacity($opacity) {
     opacity: $opacity;
     filter: alpha(opacity=($opacity * 100));
+}
+
+@mixin position($type: relative, $top: null, $right: null, $bottom: null, $left: null) {
+    @if ($type == "relative" or $type == "absolute" or $type == "fixed") {
+        position: $type;
+        top: $top;
+        right: $right;
+        bottom: $bottom;
+        left: $left;
+    }
+}
+
+@mixin rounded($top-left: null, $top-right: null, $bottom-right: null, $bottom-left: null) {
+    border-top-left-radius: $top-left;
+    border-top-right-radius: $top-right;
+    border-bottom-right-radius: $bottom-right;
+    border-bottom-left-radius: $bottom-left;
 }

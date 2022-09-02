@@ -9,6 +9,7 @@ const babel = require('gulp-babel');
 
 
 const scssSrc       = "./src/scss/**/main.scss";
+const scssWatch       = "./src/scss/**/*.scss";
 const cssDist       = "./src/dist/css";
 const cssMiniFile   = "./src/dist/css/main.css";
 
@@ -51,7 +52,7 @@ function compileJs() {
 
 // Watch files
 function watchFile () {
-    watch(scssSrc, scss);
+    watch(scssWatch, scss);
     watch(cssMiniFile, minifyCss);
     watch(jsSrc, compileJs);
 }

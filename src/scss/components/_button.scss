@@ -1,0 +1,42 @@
+.button {
+    display: block;
+    padding: 12px 18px;
+    box-shadow: $box-shadow-button;
+    border-radius: 6px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &--small {
+        @include font-size(14, 1.42);
+        padding: 8px 16px;
+    }
+
+    &--large {
+        @include font-size(18, 1.56);
+        padding: 16px 28px;
+    }
+
+    &--cycle-md {
+        padding: 20px;
+    }
+
+    &--cycle {
+        border-radius: 50%;
+    }
+
+    &--primary {
+        color: $color-button-primary;
+        background-color: $bg-button-primary;
+    }
+
+    &--second {
+        color: $color-button-second;
+        background-color: $bg-button-second;
+        border: 1px solid $border-button-color;
+    }
+
+    &--transparent {
+        background-color: transparent;
+        box-shadow: none;
+    }
+}

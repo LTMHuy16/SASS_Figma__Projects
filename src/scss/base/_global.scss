@@ -1,27 +1,27 @@
-html
-{
+html {
     font-size: 62.5%;
 }
 
-body
-{@include font-size(16);
-
+body {
+    @include font-size(16, 1.5);
+    color: $color-text-dark;
     font-family: $font-body;
     font-weight: $font-body-weight;
 }
 
-a
-{
+a {
     color: $color-link;
 }
 
-picture
-{
+picture {
     display: block;
     font-size: 0;
 }
 
-img
-{
-    width: 100%;
+img {
+    max-width: 100%;
+}
+
+button {
+    cursor: pointer;
 }

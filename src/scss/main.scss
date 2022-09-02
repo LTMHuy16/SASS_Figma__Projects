@@ -12,7 +12,20 @@
 
 @import './base/global';
 
+@import './base/iconmoon';
+
+@import './base/container';
+
 @import './base/typography';
+
+@import './base/ulities-classes';
+
+
+// COMPONENT
+
+@import './components/button';
+
+@import './components/badge';
 
 // LAYOUT
 
@@ -21,7 +34,3 @@
 @import './layout/header';
 
 @import './layout/footer';
-
-// COMPONENT
-
-@import './components/button';

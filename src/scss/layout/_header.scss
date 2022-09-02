@@ -1,0 +1,78 @@
+.header {
+    padding: 16px 0;
+
+    @include mq($lg) {
+        padding: 24px 0 44px;
+    }
+
+    &__logo {
+        max-width: 100px;
+    }
+
+    &__navbar {
+        @include mq($lg, max) {
+            @include position(fixed, 0, -100%, null, null);
+            @include rounded(10px, null, null, 10px);
+            z-index: $z-index-fixed;
+            width: 100vw;
+            max-width: 350px;
+            height: 100vh;
+            padding: 50px;
+            box-shadow: $box-shadow-1;
+            background-color: $bg-white;
+            opacity: 0;
+            pointer-events: none;
+            transition: $transition-base;
+        }
+
+        @include mq($lg) {
+            @include position(absolute, 0, 0, null, 0);
+        }
+
+        &.show {
+            @include mq($lg, max) {
+                right: 0;
+                pointer-events: auto;
+                opacity: 1;
+            }
+        }
+    }
+
+    &__list {
+        @include mq($lg) {
+            margin: 0 auto;
+            justify-content: center;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        padding: 8px 12px;
+
+        @include mq($lg) {
+            padding: 10px 24px;
+        }
+    }
+
+    &__close {
+        display: block;
+        padding: 6px;
+        background-color: transparent;
+
+        @include mq($lg) {
+            display: none;
+        }
+    }
+
+    &__controls {
+        padding-right: 10px;
+    }
+
+    &__toggle {
+        width: 60px;
+
+        @include mq($lg) {
+            display: none;
+        }
+    }
+}
