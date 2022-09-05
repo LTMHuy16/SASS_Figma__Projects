@@ -4,11 +4,23 @@
 
     1. Color
 
-    2. Font-size
+    2. Font
 
-    3. Font-family
+        2.1 Font Family
 
-    4. Breakpoints
+        2.2 Font Size
+
+        2.3 Font Icon
+
+
+    3. Variable
+
+        3.1 Grid variables
+        
+        3.2 Colors
+
+    4. Utilities Class
+
 
 ## INSTALL CSSCOMB TO ORDER CSS PROPERTIES
 
