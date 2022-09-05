@@ -1,27 +1,37 @@
-// ABSTRACTS 
+/* ABSTRACTS */
 
-@import './abstracts/variables';
+@import "./abstracts/variables";
 
-@import './abstracts/mixins';
+@import "./abstracts/media-query";
 
-@import './abstracts/media-query';
+@import "./abstracts/mixins";
 
-// BASE
+/* BASE */
 
-@import './base/reset';
+@import "./base/reset";
 
-@import './base/global';
+@import "./base/global";
 
-@import './base/typography';
+@import "./base/iconmoon";
 
-// LAYOUT
+@import "./base/container";
 
-@import './layout/grid';
+@import "./base/typography";
 
-@import './layout/header';
+/* COMPONENT */
 
-@import './layout/footer';
+@import "./components/button";
 
-// COMPONENT
+@import "./components/input";
 
-@import './components/button';
+@import "./components/image";
+
+/* HELPERS */
+
+@import "./helpers/grid";
+
+@import "./helpers/spacing";
+
+@import "./helpers/utilities";
+
+/* SECTIONS */

@@ -1,5 +1,6 @@
 .container
 {
+    width: 100%;
     max-width: $grid-max-width + $grid-spacing-wide * 2;
     margin:
     {
@@ -20,5 +21,9 @@
             right: $grid-spacing-wide;
             left: $grid-spacing-wide;
         }
+    }
+
+    &--large {
+        max-width: $grid-max-width-large + $grid-spacing-wide * 2;
     }
 }

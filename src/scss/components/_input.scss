@@ -1,0 +1,37 @@
+.input {
+    $self: &;
+    border-radius: 8px;
+    padding: 11px 14px;
+    background-color: $bg-input;
+    border: 1px solid transparent;
+    color: $color-input;
+    font-weight: 400;
+
+    @include placeholder {
+        @include font-size(16, 1.5);
+        font-weight: 400;
+    };
+
+    /* INPUT SIZES */
+
+    &--large {
+        padding: 15px 14px;
+    }
+
+
+    /* INPUT TYPES */
+
+    &--base {
+        border-color: $border-input;
+    }
+
+    &--icon {
+        padding-left: 46px;
+
+        + #{$self}__icon {
+            @include position(absolute, 50%, null, null, 14px);
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+    }
+}

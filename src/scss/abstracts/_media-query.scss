@@ -1,26 +1,30 @@
-@mixin mq($viewports, $type: min, $dir: width)
-{
+@mixin mq($viewports, $type: min, $dir: width) {
     $min: min-#{$dir};
     $max: max-#{$dir};
 
-    @if (type-of($viewports) == number)
-    {
+    @if (type-of($viewports) == number) {
 
-        @if $type == max
+        @if $viewports == 0 {
+            
+            @content;
+            
+        } 
+        @else 
         {
-            $viewports: $viewports - 1;
+            @if $type == max {
+                $viewports: $viewports - 1;
+            }
+
+            @media screen and (#{$type}-#{$dir}: $viewports) {
+                @content;
+            }
         }
 
-        @media screen and (#{$type}-#{$dir}: $viewports)
-        {
+    } @else {
+
+        @media screen and ($min: nth($viewports, 1)) and ($max: (nth($viewports, 2) - 1)) {
             @content;
         }
-    } @else
-    {
 
-        @media screen and ($min: nth($viewports, 1)) and ($max: (nth($viewports, 2) - 1))
-        {
-            @content;
-        }
     }
 }
