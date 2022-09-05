@@ -3,14 +3,22 @@ html {
 }
 
 body {
-    @include font-size(16, 1.5);
+    @include font-size(14, 1.5);
     color: $color-text-dark;
     font-family: $font-body;
     font-weight: $font-body-weight;
+
+    @include mq($md) {
+        @include font-size(16);
+    }
 }
 
 a {
     color: $color-link;
+
+    &:hover {
+        color: $color-text-main;
+    }
 }
 
 picture {
@@ -24,4 +32,9 @@ img {
 
 button {
     cursor: pointer;
+}
+
+input {
+    outline: inherit;
+    font: inherit;
 }

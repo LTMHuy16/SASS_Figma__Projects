@@ -19,3 +19,6 @@
     add npm run to pakage.json to start
 
     csscomb + file SCSS (file CSS)
+
+
+https://elad.medium.com/the-new-css-reset-53f41f13282e

@@ -1,0 +1,173 @@
+/*===================
+*  SECTION PADDING   
+=====================*/
+
+.pb-90 {
+    padding-bottom: $section-padding-bottom;
+}
+
+.pt-90 {
+    padding-top: $section-padding-top;
+}
+
+/*========================
+* MARGIN: 40
+==========================*/
+
+@each $name, $breakpoint in $spacing-breakpoints {
+    @include mq($breakpoint) {
+        .mx-#{$name}auto {
+            margin: {
+                right: auto;
+                left: auto;
+            };
+        }
+
+        .ml-#{$name}auto {
+            margin-left: auto;
+        }
+
+        .mr-#{$name}auto {
+            margin-right: auto;
+        }
+
+        .my-#{$name}auto {
+            margin: {
+                top: auto;
+                bottom: auto;
+            };
+        }
+
+        .mt-#{$name}auto {
+            margin-top: auto;
+        }
+
+        .mb-#{$name}auto {
+            margin-bottom: auto;
+        }
+
+        @for $i from 0 to 9 {
+            $marNumber: $i * 4 + px;
+
+            .mt-#{$name}#{$i * 4} {
+                margin-top: $marNumber;
+            }
+
+            .mb-#{$name}#{$i * 4} {
+                margin-bottom: $marNumber;
+            }
+
+            .mr-#{$name}#{$i * 4} {
+                margin-right: $marNumber;
+            }
+
+            .ml-#{$name}#{$i * 4} {
+                margin-left: $marNumber;
+            }
+
+            .m-#{$name}#{$i * 4} {
+                margin: $marNumber;
+            }
+        }
+    }
+}
+
+/*===============================
+*  PADDING: 
+    0, MD: 
+        => (X-axis) = (Y-axis) = 48
+
+    LG: 
+        => (X-axis): 44
+        => (Y-axis): 124
+
+=================================*/
+
+@each $name, $breakpoint in $spacing-breakpoints {
+    @if $breakpoint != $lg {
+        @include mq($breakpoint) {
+            @for $i from 0 to 13 {
+                $padNumber: $i * 4 + px;
+
+                .px-#{$name}#{$i * 4} {
+                    padding: {
+                        right: $padNumber;
+                        left: $padNumber;
+                    }
+                }
+
+                .pr-#{$name}#{$i * 4} {
+                    padding-right: $padNumber;
+                }
+
+                .pl-#{$name}#{$i * 4} {
+                    padding-left: $padNumber;
+                }
+
+                .pt-#{$name}#{$i * 4} {
+                    padding-top: $padNumber;
+                }
+
+                .pb-#{$name}#{$i * 4} {
+                    padding-bottom: $padNumber;
+                }
+
+                .py-#{$name}#{$i * 4} {
+                    padding: {
+                        bottom: $padNumber;
+                        top: $padNumber;
+                    }
+                }
+
+                .p-#{$name}#{$i * 4} {
+                    padding: $padNumber;
+                }
+            }
+        }
+    } @else {
+        
+        @include mq($lg) {
+            @for $i from 0 to 12 {
+                $padNumber: $i * 4 + px;
+
+                .px-#{$name}#{$i * 4} {
+                    padding: {
+                        right: $padNumber;
+                        left: $padNumber;
+                    }
+                }
+
+                .pr-#{$name}#{$i * 4} {
+                    padding-right: $padNumber;
+                }
+
+                .pl-#{$name}#{$i * 4} {
+                    padding-left: $padNumber;
+                }
+
+                .p-#{$name}#{$i * 4} {
+                    padding: $padNumber;
+                }
+            }
+
+            @for $i from 0 to 32 {
+                $padNumber: $i * 4 + px;
+
+                .pt-#{$name}#{$i * 4} {
+                    padding-top: $padNumber;
+                }
+
+                .pb-#{$name}#{$i * 4} {
+                    padding-bottom: $padNumber;
+                }
+
+                .py-#{$name}#{$i * 4} {
+                    padding: {
+                        bottom: $padNumber;
+                        top: $padNumber;
+                    }
+                }
+            }
+        }
+    }
+}

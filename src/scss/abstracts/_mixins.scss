@@ -17,17 +17,33 @@
     -webkit-line-clamp: $max-lines;
 }
 
-@mixin responsive-ratio($number, $pseudo: false) {
-    $padding: unquote((number) * 100 + "%");
+@mixin position($type: static, $top: null, $right: null, $bottom: null, $left: null) {
+    @if ($type == static or $type == relative or $type == absolute or $type == fixed) {
+        position: $type;
+        top: $top;
+        right: $right;
+        bottom: $bottom;
+        left: $left;
+    }
+}
+
+@mixin pseudo($type: static, $top: null, $right: null, $bottom: null, $left: null) {
+    content: "";
+    @include position($type, $top, $right, $bottom, $left);
+}
+
+@mixin img-ratio($number, $pseudo: false) {
+    $padding: 1 / $number * 100%;
 
     @if $pseudo {
         &:before {
-            @include pseudo($pos: relative);
-
+            @include pseudo($pos: absolute);
             width: 100%;
             padding-top: $padding;
         }
     } @else {
+        position: relative;
+        width: 100%;
         padding-top: $padding;
     }
 }
@@ -49,19 +65,10 @@
     filter: alpha(opacity=($opacity * 100));
 }
 
-@mixin position($type: relative, $top: null, $right: null, $bottom: null, $left: null) {
-    @if ($type == "relative" or $type == "absolute" or $type == "fixed") {
-        position: $type;
-        top: $top;
-        right: $right;
-        bottom: $bottom;
-        left: $left;
+@mixin placeholder {
+    &:-ms-input-placeholder,
+    &::-webkit-input-placeholder,
+    &::placeholder {
+        @content;
     }
-}
-
-@mixin rounded($top-left: null, $top-right: null, $bottom-right: null, $bottom-left: null) {
-    border-top-left-radius: $top-left;
-    border-top-right-radius: $top-right;
-    border-bottom-right-radius: $bottom-right;
-    border-bottom-left-radius: $bottom-left;
 }

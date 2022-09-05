@@ -10,9 +10,9 @@
         <link rel="stylesheet" href="./src/dist/css/main.min.css" />
     </head>
     <body>
-        <header id="header" class="header">
+        <header id="header" class="header py-16 pt-lg-24 pb-lg-44 bg-light">
             <div class="container container--large">
-                <div class="d-flex align-items-center justify-content-between relative">
+                <div class="flex items-center relative">
                     <div class="header__logo">
                         <a href="#">
                             <picture>
@@ -21,211 +21,242 @@
                         </a>
                     </div>
 
-                    <div class="header__navbar" id="header-menu-js">
-                        <button class="header__close ml-auto" id="close-menu-js">
+                    <div class="flex flex-lg-1 items-center ml-auto">
+                        <div class="header__navbar mx-auto" id="header-menu-js">
+                            <button
+                                class="header__close p-8 ml-auto block hide-desktop"
+                                id="close-menu-js"
+                            >
+                                <picture>
+                                    <img src="./src/image/close.svg" alt="Close Icon" />
+                                </picture>
+                            </button>
+                            <ul class="lg-flex items-center flex-lg-wrap">
+                                <li>
+                                    <a class="inline-block py-8 px-12 pt-lg-12 px-lg-24" href="#"
+                                        >Product</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="inline-block py-8 px-12 pt-lg-12 px-lg-24" href="#"
+                                        >Features</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="inline-block py-8 px-12 pt-lg-12 px-lg-24" href="#"
+                                        >Pricing</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="inline-block py-8 px-12 pt-lg-12 px-lg-24" href="#"
+                                        >Resources</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="flex flex-wrap items-center pr-4 pr-lg-0">
+                            <a
+                                href="#"
+                                class="button button--small button--transparent button--responsive-sm mr-4 mr-lg-8"
+                                >Log In</a
+                            >
+                            <a
+                                href="#"
+                                class="button button--small button--primary button--responsive-sm"
+                                >Sign Up</a
+                            >
+                        </div>
+
+                        <button
+                            class="header__toggle button button--transparent button--small hide-desktop"
+                            id="button-bar-js"
+                        >
                             <picture>
-                                <img src="./src/image/close.svg" alt="Close Icon" />
+                                <img src="./src/image/bars.svg" alt="Toggle Menu" />
                             </picture>
                         </button>
-                        <ul class="header__list d-lg-flex align-items-center flex-lg-wrap">
-                            <li>
-                                <a class="header__link" href="#">Product</a>
-                            </li>
-                            <li>
-                                <a class="header__link" href="#">Features</a>
-                            </li>
-                            <li>
-                                <a class="header__link" href="#">Pricing</a>
-                            </li>
-                            <li>
-                                <a class="header__link" href="#">Resources</a>
-                            </li>
-                        </ul>
                     </div>
-
-                    <div class="header__controls d-flex flex-wrap align-items-center ml-auto">
-                        <a href="#" class="button button--small button--transparent">Log In</a>
-                        <a href="#" class="button button--small button--primary">Sign Up</a>
-                    </div>
-
-                    <button
-                        class="header__toggle button button--transparent button--small"
-                        id="button-bar-js"
-                    >
-                        <picture>
-                            <img src="./src/image/bars.svg" alt="Toggle Menu" />
-                        </picture>
-                    </button>
                 </div>
             </div>
         </header>
 
         <main id="main">
-            <section class="hero">
-                <div class="container">
-                    <div class="hero__inner">
-                        <h1 class="text-light">A small business is only as good as its tools.</h1>
-                        <p class="text-medium">
-                            We’re different. Flex is the only saas business platform that lets you
-                            run your business on one platform, seamlessly across all digital
-                            channels.
-                        </p>
-                        <form>
-                            <div>
-                                <input
-                                    type="email"
-                                    required
-                                    placeholder="Enter your work email"
-                                    class="input"
-                                />
-                            </div>
-                            <button class="button button--large button--primary" type="submit">
-                                Get early access
-                            </button>
-                        </form>
-                        <span>Start your free 14-day trial today, no credit card required.</span>
-                    </div>
-
-                    <div class="partnership">
-                        <ul class="d-flex flex-wrap">
-                            <li class="col-md-4 col-lg-20">
-                                <picture>
-                                    <img src="./src/image/partner-1.svg" alt="Logo Partner" />
-                                </picture>
-                            </li>
-                            <li class="col-md-4 col-lg-20">
-                                <picture>
-                                    <img src="./src/image/partner-2.svg" alt="Logo Partner" />
-                                </picture>
-                            </li>
-                            <li class="col-md-4 col-lg-20">
-                                <picture>
-                                    <img src="./src/image/partner-3.svg" alt="Logo Partner" />
-                                </picture>
-                            </li>
-                            <li class="col-md-4 col-lg-20">
-                                <picture>
-                                    <img src="./src/image/partner-4.svg" alt="Logo Partner" />
-                                </picture>
-                            </li>
-                            <li class="col-md-4 col-lg-20">
-                                <picture>
-                                    <img src="./src/image/partner-5.svg" alt="Logo Partner" />
-                                </picture>
-                            </li>
-                        </ul>
+            <section class="hero bg-light">
+                <div
+                    class="container hero__inner bg-dark relative decor__hero--top-left decor__hero--bottom-right"
+                >
+                    <div class="relative decor__hero--top-right decor__hero--bottom-left">
+                        <div class="hero__content py-44 py-lg-88 mx-auto">
+                            <h1 class="text-light text-center pb-12 pb-lg-24">
+                                A small business is only as good as its tools.
+                            </h1>
+                            <p
+                                class="hero__paragraph pb-16 pb-lg-28 mx-auto text-grey text-center text-md"
+                            >
+                                We’re different. Flex is the only saas business platform that lets
+                                you run your business on one platform, seamlessly across all digital
+                                channels.
+                            </p>
+                            <form
+                                class="hero__form md-flex items-md-center justify-md-center pb-8 pb-lg-16 mx-auto"
+                            >
+                                <div class="mr-md-16 relative flex-1">
+                                    <input
+                                        type="email"
+                                        required
+                                        placeholder="Enter your work email"
+                                        class="col-12 input input--large input--icon"
+                                    />
+                                    <i class="input__icon icon-envelope text-dark"></i>
+                                </div>
+                                <button
+                                    class="hero__button button button--large button--primary mt-8 col-12 col-md-auto"
+                                    type="submit"
+                                >
+                                    Get early access
+                                </button>
+                            </form>
+                            <span class="block text-grey text-center text-sm"
+                                >Start your free 14-day trial today, no credit card required.</span
+                            >
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <section class="feature">
+            <section class="partnership relative bg-light">
+                <div class="container py-44 py-lg-88">
+                    <span class="block text-center text-gray pb-8 pb-lg-16"
+                        >Join 4,000+ companies already growing</span
+                    >
+                    <ul class="flex flex-wrap justify-lg-between">
+                        <li class="partnership__item col-4 col-lg-auto px-12 px-lg-0 py-8 py-lg-16">
+                            <picture>
+                                <img src="./src/image/partner-1.svg" alt="Logo Partner" />
+                            </picture>
+                        </li>
+                        <li class="partnership__item col-4 col-lg-auto px-12 px-lg-0 py-8 py-lg-16">
+                            <picture>
+                                <img src="./src/image/partner-2.svg" alt="Logo Partner" />
+                            </picture>
+                        </li>
+                        <li class="partnership__item col-4 col-lg-auto px-12 px-lg-0 py-8 py-lg-16">
+                            <picture>
+                                <img src="./src/image/partner-3.svg" alt="Logo Partner" />
+                            </picture>
+                        </li>
+                        <li class="partnership__item col-4 col-lg-auto px-12 px-lg-0 py-8 py-lg-16">
+                            <picture>
+                                <img src="./src/image/partner-4.svg" alt="Logo Partner" />
+                            </picture>
+                        </li>
+                        <li class="partnership__item col-4 col-lg-auto px-12 px-lg-0 py-8 py-lg-16">
+                            <picture>
+                                <img src="./src/image/partner-5.svg" alt="Logo Partner" />
+                            </picture>
+                        </li>
+                    </ul>
+                </div>
+                <div class="wave bg-white"></div>
+            </section>
+
+            <section class="service py-44 pt-lg-92 pb-lg-100">
                 <div class="container">
-                    <span class="badge">feature</span>
-                    <h2>Gain more insight into how people use your</h2>
-                    <p>
-                        With our integrated CRM, project management, collaboration and invoicing
-                        capabilities, you can manage every aspect of your business in one secure
-                        platform.
-                    </p>
-                    <div class="feature__list">
-                        <div class="feature__item">
-                            <div class="feature__icon">
-                                <picture>
-                                    <img src="./src/image/envelope-ip.svg" alt="Icon" />
-                                </picture>
+                    <div class="section-header mx-auto pb-24 pb-lg-48 text-center">
+                        <span class="inline-block mx-auto badge badge--second mb-16">feature</span>
+                        <h2 class="mb-16">Gain more insight into how people use your</h2>
+                        <p class="text-md mb-30 mb-lg-48">
+                            With our integrated CRM, project management, collaboration and invoicing
+                            capabilities, you can manage every aspect of your business in one secure
+                            platform.
+                        </p>
+                    </div>
+                    <ul class="service__list sm-flex flex-wrap">
+                        <li class="col-sm-6 col-lg-4 py-32 px-md-16 text-center">
+                            <div class="service__icon inline-block py-16 px-20 mb-24 bg-main">
+                                <i class="icon-envelope icon-white icon-24"></i>
                             </div>
-                            <h3>Measure your performance</h3>
-                            <p>
+                            <h3 class="text-xl pb-16">Measure your performance</h3>
+                            <p class="service__desc mx-auto px-lg-32">
                                 Stay connected with your team and make quick decisions wherever you
                                 are.
                             </p>
-                        </div>
-                        <div class="feature__item">
-                            <div class="feature__icon">
-                                <picture>
-                                    <img src="./src/image/2.svg" alt="Icon" />
-                                </picture>
+                        </li>
+                        <li class="col-sm-6 col-lg-4 py-32 px-md-16 text-center">
+                            <div class="service__icon inline-block py-16 px-20 mb-24 bg-main">
+                                <i class="icon-line-up icon-white icon-24"></i>
                             </div>
-                            <h3>Custom analytics</h3>
-                            <p>
+                            <h3 class="text-xl pb-16">Custom analytics</h3>
+                            <p class="service__desc mx-auto px-lg-32">
                                 Get a complete sales dashboard in the cloud. See activity, revenue
                                 and social metrics all in one place.
                             </p>
-                        </div>
-                        <div class="feature__item">
-                            <div class="feature__icon">
-                                <picture>
-                                    <img src="./src/image/3.svg" alt="Icon" />
-                                </picture>
+                        </li>
+                        <li class="col-sm-6 col-lg-4 py-32 px-md-16 text-center">
+                            <div class="service__icon inline-block py-16 px-20 mb-24 bg-main">
+                                <i class="icon-users icon-white icon-24"></i>
                             </div>
-                            <h3>Team Management</h3>
-                            <p>
+                            <h3 class="text-xl pb-16">Team Management</h3>
+                            <p class="service__desc mx-auto px-lg-32">
                                 Our calendar lets you know what is happening with customer and
                                 projects so you
                             </p>
-                        </div>
-                        <div class="feature__item">
-                            <div class="feature__icon">
-                                <picture>
-                                    <img src="./src/image/4.svg" alt="Icon" />
-                                </picture>
+                        </li>
+                        <li class="col-sm-6 col-lg-4 py-32 px-md-16 text-center">
+                            <div class="service__icon inline-block py-16 px-20 mb-24 bg-main">
+                                <i class="icon-write icon-white icon-24"></i>
                             </div>
-                            <h3>Build your website</h3>
-                            <p>
+                            <h3 class="text-xl pb-16">Build your website</h3>
+                            <p class="service__desc mx-auto px-lg-32">
                                 Stay connected with your team and make quick decisions wherever you
                                 are.
                             </p>
-                        </div>
-                        <div class="feature__item">
-                            <div class="feature__icon">
-                                <picture>
-                                    <img src="./src/image/5.svg" alt="Icon" />
-                                </picture>
+                        </li>
+                        <li class="col-sm-6 col-lg-4 py-32 px-md-16 text-center">
+                            <div class="service__icon inline-block py-16 px-20 mb-24 bg-main">
+                                <i class="icon-grid-2 icon-white icon-24"></i>
                             </div>
-                            <h3>Measure your performance</h3>
-                            <p>
+                            <h3 class="text-xl pb-16">Measure your performance</h3>
+                            <p class="service__desc mx-auto px-lg-32">
                                 A tool that lets you build a dream website even if you know nothing
                                 about web design or programming.
                             </p>
-                        </div>
-                        <div class="feature__item">
-                            <div class="feature__icon">
-                                <picture>
-                                    <img src="./src/image/6.svg" alt="Icon" />
-                                </picture>
+                        </li>
+                        <li class="col-sm-6 col-lg-4 py-32 px-md-16 text-center">
+                            <div class="service__icon inline-block py-16 px-20 mb-24 bg-main">
+                                <i class="icon-setting icon-white icon-24"></i>
                             </div>
-                            <h3>Connect multiple apps</h3>
-                            <p>
+                            <h3 class="text-xl pb-16">Connect multiple apps</h3>
+                            <p class="service__desc mx-auto px-lg-32">
                                 The first business platform to bring together all of your products
                                 from one place.
                             </p>
-                        </div>
-                        <div class="feature__item">
-                            <div class="feature__icon">
-                                <picture>
-                                    <img src="./src/image/4.svg" alt="Icon" />
-                                </picture>
-                            </div>
-                            <h3>Easy setup</h3>
-                            <p>
-                                End to End Business Platform, Sales Management, Marketing
-                                Automation, Help Desk
-                            </p>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
             </section>
 
             <!-- Start Action -->
-            <section class="action">
+            <section class="action py-30 py-lg-60 relative">
                 <div class="container">
-                    <div class="action__inner">
-                        <div class="action__information">
-                            <h2>The fastest way from idea to live site. Period.</h2>
-                            <p>Flex is a Small SaaS Business. Flex isn’t a traditional company.</p>
+                    <div
+                        class="action__inner lg-flex items-lg-center justify-lg-between py-32 py-lg-64 px-lg-100 bg-dark"
+                    >
+                        <div
+                            class="action__information col-lg-7 mx-auto text-center text-lg-left pb-24 pb-lg-0"
+                        >
+                            <h2 class="text-light mb-16">
+                                The fastest way from idea to live site. Period.
+                            </h2>
+                            <p class="text-md text-grey">
+                                Flex is a Small SaaS Business. Flex isn’t a traditional company.
+                            </p>
                         </div>
-                        <div class="action__buttons">
-                            <a href="#" class="button button--primary text-capitalize"
+                        <div class="col-lg-5 flex justify-center lg-block">
+                            <a
+                                href="#"
+                                class="button button--primary text-capitalize mr-12 mr-lg-24"
                                 >Get Started</a
                             >
                             <a href="#" class="button button--second text-capitalize">Learn More</a>
@@ -235,66 +266,66 @@
             </section>
             <!-- End Action -->
 
-            <!-- Image and Text -->
-            <div class="img-content">
+            <!-- Feature -->
+            <div class="pt-32 pb-40 pt-lg-92 pb-lg-120 bg-light">
                 <div class="container">
-                    <div class="img-content__heading">
-                        <span class="badge">Feature</span>
-                        <h2>Gain more insight into how people use your</h2>
-                        <p>
+                    <div class="text-center text-lg-left section-header pb-40 pb-lg-80">
+                        <span class="inline-block badge badge--second mb-16">Feature</span>
+                        <h2 class="mb-16">Gain more insight into how people use your</h2>
+                        <p class="text-md">
                             With our integrated CRM, project management, collaboration and invoicing
                             capabilities, you can manage every aspect of your business in one secure
                             platform.
                         </p>
                     </div>
 
-                    <div class="d-lg-flex align-items-center">
-                        <div class="col-lg-6">
-                            <picture>
-                                <img src="./src/image/books.jpg" alt="books" />
+                    <div class="md-flex items-center flex-reverse">
+                        <div
+                            class="col-md-6 relative decor__feature--bottom-right decor__feature--top-left"
+                        >
+                            <picture class=" image--1">
+                                <img
+                                    class="image__responsive image--rounded"
+                                    src="./src/image/books.jpg"
+                                    alt="books"
+                                />
                             </picture>
                         </div>
 
-                        <div class="col-lg-6">
-                            <div class="d-flex flex-column">
-                                <div>
-                                    <div>
-                                        <picture>
-                                            <img src="./src/image/1.svg" alt="Icon" />
-                                        </picture>
+                        <div class="col-md-6">
+                            <div
+                                class="feature__list mx-auto ml-md-0 mr-md-auto flex flex-col items-center items-lg-left pt-40 pt-md-0"
+                            >
+                                <div class="flex items-start">
+                                    <div class="feature__icon bg-main">
+                                        <i class="icon-write icon-white icon-21"></i>
                                     </div>
-                                    <div>
-                                        <h3>Measure your performance</h3>
+                                    <div class="pt-12 pl-24">
+                                        <h3 class="text-xl pb-16">Measure your performance</h3>
                                         <p>
                                             Stay connected with your team and make quick decisions
                                             wherever you are.
                                         </p>
                                     </div>
                                 </div>
-
-                                <div>
-                                    <div>
-                                        <picture>
-                                            <img src="./src/image/2.svg" alt="Icon" />
-                                        </picture>
+                                <div class="flex items-start">
+                                    <div class="feature__icon bg-main">
+                                        <i class="icon-envelope icon-white icon-21"></i>
                                     </div>
-                                    <div>
-                                        <h3>Build your website</h3>
+                                    <div class="pt-12 pl-24">
+                                        <h3 class="text-xl pb-16">Build your website</h3>
                                         <p>
                                             A tool that lets you build a dream website even if you
                                             know nothing about web design or programming.
                                         </p>
                                     </div>
                                 </div>
-
-                                <div>
-                                    <div>
-                                        <picture>
-                                            <img src="./src/image/3.svg" alt="Icon" />
-                                        </picture>
+                                <div class="flex items-start">
+                                    <div class="feature__icon bg-main">
+                                        <i class="icon-grid-2 icon-white icon-21"></i>
                                     </div>
-                                    <div>
-                                        <h3>Connect multiple apps</h3>
+                                    <div class="pt-12 pl-24">
+                                        <h3 class="text-xl pb-16">Connect multiple apps</h3>
                                         <p>
                                             The first business platform to bring together all of
                                             your products from one place.
@@ -306,62 +337,35 @@
                     </div>
                 </div>
             </div>
-            <!-- End Image and Text -->
-
-            <!-- Image and Text -->
-            <div class="img-content">
-                <div class="container">
-                    <div class="d-lg-flex align-items-center">
-                        <div class="col-lg-6">
-                            <picture>
-                                <img src="./src/image/books.jpg" alt="books" />
-                            </picture>
-                        </div>
-
-                        <div class="col-lg-6">
-                            <div class="">
-                                <span class="badge">Feature</span>
-                                <h2>Gain more insight into how people use your</h2>
-                                <p>
-                                    With our integrated CRM, project management, collaboration and
-                                    invoicing capabilities, you can manage every aspect of your
-                                    business in one secure platform.
-                                </p>
-                                <a href="#" class="button button--primary">Get Started</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Image and Text -->
+            <!-- End Feature -->
 
             <!-- Number -->
-            <section class="number">
+            <section class="number py-40 py-lg-88">
                 <div class="container">
-                    <div class="number__heading text-center">
-                        <span class="badge badge--second">NUMBers</span>
-                        <h2>We believe in the power of data</h2>
-                        <p>
+                    <div class="section-header text-center mx-auto pb-30 pb-lg-64">
+                        <span class="inline-block badge badge--second mb-16">NUMBers</span>
+                        <h2 class="text-3xl mb-16">We believe in the power of data</h2>
+                        <p class="text-md">
                             Flex is the only business platform that lets you run your business on
                             one platform, seamlessly across all digital channels.
                         </p>
                     </div>
-                    <div class="d-sm-flex">
-                        <div class="col-sm-6 col-lg-3 d-flex flex-column text-center">
-                            <span class="text-xl text-main-color">235.h000</span>
-                            <span class="text-medium">Projects completed</span>
+                    <div class="flex flex-wrap">
+                        <div class="col-6 col-lg-3 flex flex-col text-center py-32 py-32">
+                            <span class="text-main-color pb-8 text-3xl text-700">235.h000</span>
+                            <span class="text-md">Projects completed</span>
                         </div>
-                        <div class="col-sm-6 col-lg-3 d-flex flex-column text-center">
-                            <span class="text-xl text-main-color">$10m</span>
-                            <span class="text-medium">APR</span>
+                        <div class="col-6 col-lg-3 flex flex-col text-center py-32">
+                            <span class="text-main-color pb-8 text-3xl text-700">$10m</span>
+                            <span class="text-md">APR</span>
                         </div>
-                        <div class="col-sm-6 col-lg-3 d-flex flex-column text-center">
-                            <span class="text-xl text-main-color">+50.000</span>
-                            <span class="text-medium">Hours Saved Annually</span>
+                        <div class="col-6 col-lg-3 flex flex-col text-center py-32">
+                            <span class="text-main-color pb-8 text-3xl text-700">+50.000</span>
+                            <span class="text-md">Hours Saved Annually</span>
                         </div>
-                        <div class="col-sm-6 col-lg-3 d-flex flex-column text-center">
-                            <span class="text-xl text-main-color">3.500</span>
-                            <span class="text-medium">Unique Users</span>
+                        <div class="col-6 col-lg-3 flex flex-col text-center py-32">
+                            <span class="text-main-color pb-8 text-3xl text-700">3.500</span>
+                            <span class="text-md">Unique Users</span>
                         </div>
                     </div>
                 </div>
@@ -369,37 +373,26 @@
             <!-- End Number -->
 
             <!-- Our Work -->
-            <section class="work">
-                <div class="container">
-                    <div class="d-md-flex">
-                        <div class="work__heading text-left">
-                            <span class="badge badge--second">NUMBers</span>
-                            <h2>We believe in the power of data</h2>
-                            <p>
+            <section class="work bg-dark">
+                <div class="wave wave--top wave--dark bg-white"></div>
+                <div class="container py-40 py-lg-88">
+                    <div class="lg-flex flex-lg-wrap sectin-margin--16">
+                        <div class="col-lg-6 text-left px-lg-16">
+                            <span class="inline-block mb-16 badge badge--second">Number</span>
+                            <h2 class="text-light text-3xl text-700 mb-16">
+                                Gain more insight into how people use your
+                            </h2>
+                            <p class="text-grey text-md">
                                 Flex is the only business platform that lets you run your business
                                 on one platform, seamlessly across all digital channels.
                             </p>
                         </div>
-                        <div class="work__video">
-                            <div class="work__video-bg">
-                                <picture>
-                                    <img
-                                        src="./src/image/video-bg.jpg"
-                                        alt="Video Background"
-                                        width="100"
-                                        height="100"
-                                    />
-                                </picture>
+                        <div class="col-lg-6 px-lg-16 relative pt-32 pt-lg-0">
+                            <div class="work__video image--16-9">
+                                <!-- Iframe Video -->
                             </div>
-                            <button class="button button--cycle">
-                                <picture>
-                                    <img
-                                        src="./src/image/video-play.svg"
-                                        alt="Video Icon"
-                                        width="100"
-                                        height="100"
-                                    />
-                                </picture>
+                            <button class="work__btn button button--cycle button--cycle-md bg-main">
+                                <i class="icon-play icon--white icon-24"></i>
                             </button>
                         </div>
                     </div>
@@ -440,6 +433,7 @@
                         </div>
                     </div>
                 </div>
+                <div class="wave wave--bottom wave--dark bg-white"></div>
             </section>
             <!-- End Our Work -->
 
@@ -494,7 +488,7 @@
                                 <i class="icon-grid"></i>
                             </div>
                             <h3>Socials</h3>
-                            <ul class="contact__socials d-flex">
+                            <ul class="contact__socials flex">
                                 <li class="col-lg-3">
                                     <a href="#">
                                         <i class="icon-facebook"></i>
@@ -534,7 +528,7 @@
                     </picture>
                 </div>
 
-                <ul class="d-flex">
+                <!-- <ul class="flex">
                     <li>
                         <a href="#" class="footer__link">Product</a>
                     </li>
@@ -556,7 +550,7 @@
                     <li>
                         <a href="#" class="footer__link">Privacy</a>
                     </li>
-                </ul>
+                </ul> -->
 
                 <div class="footer__right">
                     <p class="footer__text">© 2021 Flex. All rights reserved.</p>

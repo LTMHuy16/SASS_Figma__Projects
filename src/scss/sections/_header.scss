@@ -1,0 +1,42 @@
+.header {
+    &__logo {
+        max-width: 70px;
+
+        @include mq($lg) {
+            max-width: 100px;
+        }
+    }
+
+    &__navbar {
+        @include mq($lg, max) {
+            @include position(fixed, 0, -500px, null, null);
+            border-radius: 10px 0 0 10px;
+            z-index: $z-index-fixed;
+            width: 100vw;
+            max-width: 350px;
+            height: 100vh;
+            padding: 50px;
+            box-shadow: $box-shadow-navbar;
+            background-color: $bg-white;
+            opacity: 0;
+            pointer-events: none;
+            transition: $transition-base;
+        }
+
+        &.show {
+            @include mq($lg, max) {
+                right: 0;
+                pointer-events: auto;
+                opacity: 1;
+            }
+        }
+    }
+
+    &__close {
+        background-color: transparent;
+    }
+
+    &__toggle {
+        width: 60px;
+    }
+}

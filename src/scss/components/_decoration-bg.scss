@@ -1,0 +1,113 @@
+%base-decor {
+    display: none;
+    content: "";
+    z-index: $z-index-above;
+    background-size: cover;
+    background-repeat: no-repeat;
+    pointer-events: none;
+
+    @include mq($lg) {
+        display: block;
+    }
+}
+
+%base-decor-1 {
+    @extend %base-decor;
+    width: 148px;
+    height: 90px;
+}
+
+%base-decor-2 {
+    @extend %base-decor;
+    border-radius: 24px;
+    width: 170px;
+    height: 170px;
+}
+
+%base-decor-3 {
+    @extend %base-decor;
+    width: 130px;
+    height: 130px;
+}
+
+.decor {
+    /* DECORATIONS IN HERO SECTION */
+
+    &__hero {
+        &--top-right {
+            &::before {
+                @extend %base-decor-1;
+                @include position(absolute, 24px, 14px, null, null);
+                background-image: url("../../image/hero-bg-1.svg");
+            }
+        }
+
+        &--bottom-left {
+            &::after {
+                @extend %base-decor-1;
+                @include position(absolute, null, null, 24px, 14px);
+                background-image: url("../../image/hero-bg-4.svg");
+            }
+        }
+
+        &--top-left {
+            &::after {
+                @extend %base-decor-2;
+                @include position(absolute, 0, null, null, 0);
+                z-index: $z-index-above;
+                background-image: url("../../image/hero-bg-3.svg");
+            }
+        }
+
+        &--bottom-right {
+            &::before {
+                @extend %base-decor-2;
+                @include position(absolute, null, 0, 0, null);
+                z-index: $z-index-above;
+                background-image: url("../../image/hero-bg-2.svg");
+            }
+        }
+    }
+
+    &__feature {
+        &--top-left {
+            &::after {
+                @extend %base-decor-3;
+                @include position(absolute, 0, null, null, 0);
+                z-index: $z-index-above;
+                background-image: url("../../image/feature-bg-1.svg");
+                transform: translate(-30%, -20%);
+            }
+        }
+
+        &--bottom-right {
+            &::before {
+                @extend %base-decor-1;
+                @include position(absolute, null, 0, 0, null);
+                z-index: $z-index-above;
+                background-image: url("../../image/feature-bg-2.svg");
+                transform: translate(8%, 32%);
+            }
+        }
+    }
+}
+
+/* WAVE DECORATION */
+.wave {
+    background-size: cover;
+    background-position: bottom left;
+    height: 7.6vw;
+    max-height: 116px;
+
+    &--top {
+        transform: rotate(-180deg);
+    }
+
+    &--gray {
+        background-image: url(../../image/bg-wave.svg);
+    }
+
+    &--dark {
+        background-image: url(../../image/bg-wave-dark.svg);
+    }
+}

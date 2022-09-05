@@ -1,10 +1,13 @@
 .button {
-    display: block;
+    display: inline-block;
     padding: 12px 18px;
     box-shadow: $box-shadow-button;
     border-radius: 6px;
-    text-transform: uppercase;
+    border: 1px solid transparent;
     cursor: pointer;
+    transition: $transition-base;
+
+    /* BUTTON SIZE */
 
     &--small {
         @include font-size(14, 1.42);
@@ -13,8 +16,17 @@
 
     &--large {
         @include font-size(18, 1.56);
-        padding: 16px 28px;
+        padding: 13px 28px;
     }
+
+    &--responsive-sm {
+        @include mq($sm, max) {
+            @include font-size(12);
+            padding: 6px;
+        }
+    }
+
+    /* BUTTON SHAPE */
 
     &--cycle-md {
         padding: 20px;
@@ -24,19 +36,38 @@
         border-radius: 50%;
     }
 
+    &--hover-scale {
+        &:hover {
+            transform: scale(1.08);
+        }
+    }
+
+    /* BUTTON TYPE */
+
     &--primary {
         color: $color-button-primary;
         background-color: $bg-button-primary;
+
+        &:hover {
+            color: $color-button-second;
+            background-color: $bg-button-second;
+            border-color: $border-button-primary;
+        }
     }
 
     &--second {
         color: $color-button-second;
         background-color: $bg-button-second;
-        border: 1px solid $border-button-color;
+        border-color: $border-button-second;
     }
 
     &--transparent {
         background-color: transparent;
         box-shadow: none;
+
+        &:hover {
+            color: $color-button-second;
+            border-color: $border-button-primary;
+        }
     }
 }

@@ -23,26 +23,15 @@ h1,
 
 h2,
 .h2 {
-    @include font-size(28, 1.22);
-    letter-spacing: -0.2px;
-
-    @include mq($lg) {
-        @include font-size(48);
-    }
-}
-
-h3,
-.h3 {
-    @include font-size(20, 1.33);
+    @include font-size(20, 1.22);
     @include mq($lg) {
         @include font-size(36);
     }
 }
 
-h4,
-.h4 {
-    @include font-size(24);
-
+h3,
+.h3 {
+    @include font-size(20, 1.5);
     @include mq($lg) {
         @include font-size(24);
     }
@@ -51,24 +40,41 @@ h4,
 .text {
     /* SIZE */
 
-    &--sm {
+    &-sm {
+        @include font-size(14, 1.42);
     }
 
     &-md {
-        @include font-size(20);
+        @include font-size(16);
+
+        @include mq($lg) {
+            @include font-size(20);
+        }
     }
 
     &-xl {
-        @include font-size(36, 1.5);
+        @include font-size(20, 1.33);
+
+        @include mq($lg) {
+            @include font-size(24);
+        }
+    }
+
+    &-2xl {
+        @include font-size(26, 1.26);
+
+        @include mq($lg) {
+            @include font-size(30);
+        }
+    }
+
+    &-3xl {
+        @include font-size(36, 1.2);
         letter-spacing: -0.2px;
 
         @include mq($lg) {
             @include font-size(48);
         }
-    }
-
-    &-3xl {
-        @include font-size(30, 1.26);
     }
 
     /* WEIGHT */
@@ -94,6 +100,10 @@ h4,
         color: $color-text-grey;
     }
 
+    &-gray {
+        color: $color-text-gray;
+    }
+
     &-dark {
         color: $color-text-dark;
     }
@@ -114,6 +124,20 @@ h4,
 
     &-right {
         text-align: right;
+    }
+
+    @include mq($lg) {
+        &-lg-center {
+            text-align: center;
+        }
+
+        &-lg-left {
+            text-align: left;
+        }
+
+        &-lg-right {
+            text-align: right;
+        }
     }
 
     /* TEXT STYLES */

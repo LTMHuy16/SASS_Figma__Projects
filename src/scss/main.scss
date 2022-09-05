@@ -1,36 +1,60 @@
-// ABSTRACTS 
+/* ABSTRACTS */
 
-@import './abstracts/variables';
+@import "./abstracts/variables";
 
-@import './abstracts/mixins';
+@import "./abstracts/media-query";
 
-@import './abstracts/media-query';
-
-// BASE
-
-@import './base/reset';
-
-@import './base/global';
-
-@import './base/iconmoon';
-
-@import './base/container';
-
-@import './base/typography';
-
-@import './base/ulities-classes';
+@import "./abstracts/mixins";
 
 
-// COMPONENT
+/* BASE */
 
-@import './components/button';
+@import "./base/reset";
 
-@import './components/badge';
+@import "./base/global";
 
-// LAYOUT
+@import "./base/iconmoon";
 
-@import './layout/grid';
+@import "./base/container";
 
-@import './layout/header';
+@import "./base/typography";
 
-@import './layout/footer';
+/* COMPONENT */
+
+@import "./components/button";
+
+@import "./components/badge";
+
+@import "./components/input";
+
+@import "./components/decoration-bg";
+
+@import "./components/image";
+
+
+/* HELPERS */
+
+@import "./helpers/grid";
+
+@import "./helpers/spacing";
+
+@import "./helpers/utilities";
+
+
+/* SECTIONS */
+
+@import "./sections/header";
+
+@import "./sections/hero";
+
+@import "./sections/partnership";
+
+@import "./sections/service";
+
+@import "./sections/action";
+
+@import "./sections/feature";
+
+@import "./sections/work";
+
+@import "./sections/footer";

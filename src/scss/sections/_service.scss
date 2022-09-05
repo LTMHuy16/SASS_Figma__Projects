@@ -1,0 +1,15 @@
+.service {
+    &__list {
+        @include mq($md) {
+            margin: 0 -16px;
+        }
+    }
+
+    &__icon {
+        border-radius: 8px;
+    }
+
+    &__desc {
+        max-width: 360px;
+    }
+}

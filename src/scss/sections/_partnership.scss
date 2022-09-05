@@ -1,0 +1,7 @@
+.partnership {
+    &__item {
+        @include mq($lg) {
+            max-width: 20%;
+        }
+    }
+}
