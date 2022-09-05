@@ -6,7 +6,7 @@
 
     2. Font-size
 
-    3. Font-family 
+    3. Font-family
 
     4. Breakpoints
 
@@ -20,11 +20,6 @@
 
     add npm run to pakage.json to start
 
-<<<<<<< HEAD
-    csscomb + file SCSS (file CSS)
-=======
     csscomb + file SCSS (file CSS)
 
-
-https://elad.medium.com/the-new-css-reset-53f41f13282e
->>>>>>> techcompany-site
+    csscomb + file SCSS (file CSS)
