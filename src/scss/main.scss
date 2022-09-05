@@ -6,7 +6,6 @@
 
 @import "./abstracts/mixins";
 
-
 /* BASE */
 
 @import "./base/reset";
@@ -23,14 +22,9 @@
 
 @import "./components/button";
 
-@import "./components/badge";
-
 @import "./components/input";
 
-@import "./components/decoration-bg";
-
 @import "./components/image";
-
 
 /* HELPERS */
 
@@ -40,21 +34,4 @@
 
 @import "./helpers/utilities";
 
-
 /* SECTIONS */
-
-@import "./sections/header";
-
-@import "./sections/hero";
-
-@import "./sections/partnership";
-
-@import "./sections/service";
-
-@import "./sections/action";
-
-@import "./sections/feature";
-
-@import "./sections/work";
-
-@import "./sections/footer";
