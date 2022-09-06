@@ -3,8 +3,8 @@ html {
 }
 
 body {
-    @include font-size(14, 1.5);
-    color: $color-text-dark;
+    @include font-size(14, 1.6);
+    color: $color-base;
     font-family: $font-body;
     font-weight: $font-body-weight;
 
@@ -14,10 +14,10 @@ body {
 }
 
 a {
-    color: $color-link;
+    color: $color-base;
 
     &:hover {
-        color: $color-text-main;
+        color: $color-red-light;
     }
 }
 

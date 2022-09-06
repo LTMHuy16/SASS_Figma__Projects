@@ -46,7 +46,7 @@
 
     @if $pseudo {
         &:before {
-            @include pseudo($pos: absolute, 0, 0, null, 0);
+            @include pseudo(absolute, 0, 0, null, 0);
             width: 100%;
             padding-top: $padding;
         }

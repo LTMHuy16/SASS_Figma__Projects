@@ -2,9 +2,9 @@
     $self: &;
     border-radius: 8px;
     padding: 11px 14px;
-    background-color: $bg-input;
+    background-color: $color-light;
     border: 1px solid transparent;
-    color: $color-input;
+    color: $color-dark;
     font-weight: 400;
 
     @include placeholder {
@@ -22,7 +22,7 @@
     /* INPUT TYPES */
 
     &--base {
-        border-color: $border-input;
+        border-color: $color-light;
     }
 
     &--icon {

@@ -4,52 +4,35 @@ $grid-columns: 12;
 $grid-spacing-small: 1rem; // 20px / 2
 $grid-spacing-wide: 1rem; // 20px / 2
 
-$grid-max-width: 115rem; // 1150px
-$grid-max-width-large: 126.2rem; // 1262px
+$grid-max-width: 11.6rem;
+$grid-max-width-large: 12.2rem;
 
 //========= COLORS ============
 
-$color-main: #22c55e;
+$color-base: #000;
 
-$color-title: #2a3342;
-$color-subtitle: #8896ab;
+$color-title: #000;
+$color-subtitle: #000;
 
 $color-link: #8896ab;
 
-$color-text-light: #fff;
-$color-text-dark: #556987;
-$color-text-grey: #8896ab;
-$color-text-gray: #CFC7BB;
-$color-text-main: $color-main;
+$color-light: #fff;
+$color-dark: #000;
+$color-grey: #4d4d4d;
+$color-red-light: #CD4631;
+$color-pink: #f7ede8;
+$color-blue: #81adc8;
+$color-blue-light: #edf3f7;
 
 $color-button-primary: #f0fdf4;
 $color-button-second: #333f51;
 
-$color-badge-primary: #f0fdf4;
-$color-badge-second: #dcfce7;
-
-$color-input: #667085;
-
-$bg-main: $color-main;
-$bg-light: #f7f8f9;
-$bg-dark: #2a3342;
-$bg-white: #fff;
-
-$bg-button-primary: $color-main;
+$bg-button-primary: #fff;
 $bg-button-second: #ffffff;
-
-$bg-input: #fff;
-
-$bg-badge-primary: $color-main;
-$bg-badge-second: #dcfce7;
-
-$border-button-primary: $color-main;
-$border-button-second: #d5dae1;
-$border-input: #d5dae1;
 
 //========= FONTS ============
 
-$font-body: "Poppins", sans-serif;
+$font-body: 'Montserrat Alternates', sans-serif;
 $font-title: $font-body;
 
 $font-title-weight: 700;
@@ -57,11 +40,11 @@ $font-body-weight: 500;
 
 //========= BREAKPOINTS ============
 
-$sm: 480px;
-$md: 768px;
-$lg: 1024px;
-$xl: 1200px;
-$xxl: 1440px;
+$sm: 4.8rem;
+$md: 7.68rem;
+$lg: 10.24rem;
+$xl: 12rem;
+$xxl: 14.4rem;
 
 // breakpoints to render grid system
 $breakpoints: (

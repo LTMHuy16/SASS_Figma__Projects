@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600;700&display=swap');
 
 h1,
 h2,
@@ -8,34 +8,54 @@ h5,
 h6 {
     color: $color-title;
     font-family: $font-title;
-    font-weight: $font-title-weight;
 }
 
 h1,
 .h1 {
-    @include font-size(40, 1.2);
-    letter-spacing: -0.2px;
+    @include font-size(48, 1.2);
+    font-weight: 700;
+    letter-spacing: -0.2rem;
 
     @include mq($lg) {
-        @include font-size(60);
+        @include font-size(59.3);
     }
 }
 
 h2, .h2
 {
-    @include font-size(28);
+    @include font-size(30);
 
     @include mq($lg)
     {
-        @include font-size(48);
+        @include font-size(36.65);
+    }
+
+    &--main {
+        line-height: 1;
+    }
+
+    &--second {
+        line-height: 1.4;
     }
 }
 
-h2,
-.h2 {
-    @include font-size(20, 1.22);
+h3,
+.h3 {
+    @include font-size(19.65);
+
     @include mq($lg) {
-        @include font-size(36);
+        @include font-size(22.65);
+    }
+
+    &--main {
+        line-height: 1.4;
+        font-weight: 500;
+    }
+
+    &--second {
+        line-height: 1.6;
+        font-weight: 700;
+        letter-spacing: -0.2rem;
     }
 }
 
@@ -44,43 +64,25 @@ h2,
     /* SIZE */
 
     &-sm {
-        @include font-size(14, 1.42);
+        @include font-size(10, 1.6);
+
+
+        @include mq($lg) {
+            @include font-size(12);
+        }
+
     }
 
     &-md {
-        @include font-size(16);
+        @include font-size(12, 1.6);
 
         @include mq($lg) {
-            @include font-size(20);
-        }
-    }
-
-    &-xl {
-        @include font-size(20, 1.33);
-
-        @include mq($lg) {
-            @include font-size(24);
-        }
-    }
-
-    &-2xl {
-        @include font-size(26, 1.26);
-
-        @include mq($lg) {
-            @include font-size(30);
-        }
-    }
-
-    &-3xl {
-        @include font-size(36, 1.2);
-        letter-spacing: -0.2px;
-
-        @include mq($lg) {
-            @include font-size(48);
+            @include font-size(14);
         }
     }
 
     /* WEIGHT */
+
     &-500 {
         font-weight: 500;
     }
@@ -95,24 +97,32 @@ h2,
 
     /* COLORS */
 
-    &-main-color {
-        color: $color-text-main;
-    }
-
-    &-grey {
-        color: $color-text-grey;
-    }
-
-    &-gray {
-        color: $color-text-gray;
+    &-light {
+        color: $color-light;
     }
 
     &-dark {
-        color: $color-text-dark;
+        color: $color-dark;
     }
 
-    &-light {
-        color: $color-text-light;
+    &-grey {
+        color: $color-grey;
+    }
+
+    &-red-light {
+        color: $color-red-light;
+    }
+
+    &-pink {
+        color: $color-pink;
+    }
+
+    &-blue {
+        color: $color-blue;
+    }
+
+    &-blue-light {
+        color: $color-blue-light;
     }
 
     /* ALIGNMENT */

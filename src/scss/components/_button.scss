@@ -28,46 +28,8 @@
 
     /* BUTTON SHAPE */
 
-    &--cycle-md {
-        padding: 20px;
-    }
-
-    &--cycle {
-        border-radius: 50%;
-    }
-
-    &--hover-scale {
-        &:hover {
-            transform: scale(1.08);
-        }
-    }
-
     /* BUTTON TYPE */
 
     &--primary {
-        color: $color-button-primary;
-        background-color: $bg-button-primary;
-
-        &:hover {
-            color: $color-button-second;
-            background-color: $bg-button-second;
-            border-color: $border-button-primary;
-        }
-    }
-
-    &--second {
-        color: $color-button-second;
-        background-color: $bg-button-second;
-        border-color: $border-button-second;
-    }
-
-    &--transparent {
-        background-color: transparent;
-        box-shadow: none;
-
-        &:hover {
-            color: $color-button-second;
-            border-color: $border-button-primary;
-        }
     }
 }

@@ -16,33 +16,8 @@
 
 /* BACKGROUND COLOR */
 
-.bg-main {
-    background-color: $bg-main;
-}
-
-.bg-light {
-    background-color: $bg-light;
-}
-
-.bg-dark {
-    background-color: $bg-dark;
-}
-
-.bg-white {
-    background-color: $bg-white;
-}
 
 /* SECTION */
-.section-header {
-    max-width: 920px;
-}
 
-.section-margin {
-    &--16 {
-        @include mq($lg) {
-            margin: 0 -16px;
-        }
-    }
-}
 
 /* IMAGE */
