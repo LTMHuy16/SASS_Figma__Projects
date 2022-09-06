@@ -1,3 +1,4 @@
+$spacing: 8;
 /*========================
 * MARGIN: 40
 ==========================*/
@@ -35,25 +36,25 @@
         }
 
         @for $i from 0 to 9 {
-            $marNumber: $i * 4 + px;
+            $marNumber: $i * $spacing + px;
 
-            .mt-#{$name}#{$i * 4} {
+            .mt-#{$name}#{$i * $spacing} {
                 margin-top: $marNumber;
             }
 
-            .mb-#{$name}#{$i * 4} {
+            .mb-#{$name}#{$i * $spacing} {
                 margin-bottom: $marNumber;
             }
 
-            .mr-#{$name}#{$i * 4} {
+            .mr-#{$name}#{$i * $spacing} {
                 margin-right: $marNumber;
             }
 
-            .ml-#{$name}#{$i * 4} {
+            .ml-#{$name}#{$i * $spacing} {
                 margin-left: $marNumber;
             }
 
-            .m-#{$name}#{$i * 4} {
+            .m-#{$name}#{$i * $spacing} {
                 margin: $marNumber;
             }
         }
@@ -75,39 +76,39 @@
     @if $breakpoint != $lg {
         @include mq($breakpoint) {
             @for $i from 0 to 13 {
-                $padNumber: $i * 4 + px;
+                $padNumber: $i * $spacing + px;
 
-                .px-#{$name}#{$i * 4} {
+                .px-#{$name}#{$i * $spacing} {
                     padding: {
                         right: $padNumber;
                         left: $padNumber;
                     }
                 }
 
-                .pr-#{$name}#{$i * 4} {
+                .pr-#{$name}#{$i * $spacing} {
                     padding-right: $padNumber;
                 }
 
-                .pl-#{$name}#{$i * 4} {
+                .pl-#{$name}#{$i * $spacing} {
                     padding-left: $padNumber;
                 }
 
-                .pt-#{$name}#{$i * 4} {
+                .pt-#{$name}#{$i * $spacing} {
                     padding-top: $padNumber;
                 }
 
-                .pb-#{$name}#{$i * 4} {
+                .pb-#{$name}#{$i * $spacing} {
                     padding-bottom: $padNumber;
                 }
 
-                .py-#{$name}#{$i * 4} {
+                .py-#{$name}#{$i * $spacing} {
                     padding: {
                         bottom: $padNumber;
                         top: $padNumber;
                     }
                 }
 
-                .p-#{$name}#{$i * 4} {
+                .p-#{$name}#{$i * $spacing} {
                     padding: $padNumber;
                 }
             }
@@ -116,40 +117,40 @@
         
         @include mq($lg) {
             @for $i from 0 to 12 {
-                $padNumber: $i * 4 + px;
+                $padNumber: $i * $spacing + px;
 
-                .px-#{$name}#{$i * 4} {
+                .px-#{$name}#{$i * $spacing} {
                     padding: {
                         right: $padNumber;
                         left: $padNumber;
                     }
                 }
 
-                .pr-#{$name}#{$i * 4} {
+                .pr-#{$name}#{$i * $spacing} {
                     padding-right: $padNumber;
                 }
 
-                .pl-#{$name}#{$i * 4} {
+                .pl-#{$name}#{$i * $spacing} {
                     padding-left: $padNumber;
                 }
 
-                .p-#{$name}#{$i * 4} {
+                .p-#{$name}#{$i * $spacing} {
                     padding: $padNumber;
                 }
             }
 
             @for $i from 0 to 32 {
-                $padNumber: $i * 4 + px;
+                $padNumber: $i * $spacing + px;
 
-                .pt-#{$name}#{$i * 4} {
+                .pt-#{$name}#{$i * $spacing} {
                     padding-top: $padNumber;
                 }
 
-                .pb-#{$name}#{$i * 4} {
+                .pb-#{$name}#{$i * $spacing} {
                     padding-bottom: $padNumber;
                 }
 
-                .py-#{$name}#{$i * 4} {
+                .py-#{$name}#{$i * $spacing} {
                     padding: {
                         bottom: $padNumber;
                         top: $padNumber;
