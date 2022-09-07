@@ -4,7 +4,7 @@ $grid-columns: 12;
 $grid-spacing-small: 1rem; // 20px / 2
 $grid-spacing-wide: 1rem; // 20px / 2
 
-$grid-max-width: 11.6rem;
+$grid-max-width: 116rem;
 $grid-max-width-large: 12.2rem;
 
 //========= COLORS ============
@@ -24,11 +24,13 @@ $color-pink: #f7ede8;
 $color-blue: #81adc8;
 $color-blue-light: #edf3f7;
 
-$color-button-primary: #f0fdf4;
+$color-button-primary: #fff;
 $color-button-second: #333f51;
 
-$bg-button-primary: #fff;
+$bg-button-primary: #000;
 $bg-button-second: #ffffff;
+
+$border-button: #000;
 
 //========= FONTS ============
 
@@ -40,11 +42,11 @@ $font-body-weight: 500;
 
 //========= BREAKPOINTS ============
 
-$sm: 4.8rem;
-$md: 7.68rem;
-$lg: 10.24rem;
-$xl: 12rem;
-$xxl: 14.4rem;
+$sm: 48rem;
+$md: 768rem;
+$lg: 102.4rem;
+$xl: 120rem;
+$xxl: 144rem;
 
 // breakpoints to render grid system
 $breakpoints: (
@@ -82,6 +84,6 @@ $transition-base: 0.4s ease;
 
 //========= BOX-SHADOW ============
 
-$box-shadow-button: 0px 1px 2px rgba(105, 81, 255, 0.05);
+$box-shadow-button: 3px 3px 0px rgba(0, 0, 0, 0.25);
 $box-shadow-navbar: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 $box-shadow-input: 0px 1px 2px rgba(0, 0, 0, 0.05);

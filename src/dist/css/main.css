@@ -161,7 +161,7 @@ body {
   font-family: "Montserrat Alternates", sans-serif;
   font-weight: 500; }
 
-@media screen and (min-width: 7.68rem) {
+@media screen and (min-width: 768rem) {
   body {
     font-size: 16px;
     font-size: 1.6rem; } }
@@ -188,7 +188,7 @@ input {
 
 .container {
   width: 100%;
-  max-width: 13.6rem;
+  max-width: 118rem;
   margin-right: auto;
   margin-left: auto;
   padding-right: 1rem;
@@ -219,7 +219,7 @@ h1,
   font-weight: 700;
   letter-spacing: -0.2rem; }
 
-@media screen and (min-width: 10.24rem) {
+@media screen and (min-width: 102.4rem) {
   h1,
   .h1 {
     font-size: 59.3px;
@@ -229,7 +229,7 @@ h2, .h2 {
   font-size: 30px;
   font-size: 3rem; }
 
-@media screen and (min-width: 10.24rem) {
+@media screen and (min-width: 102.4rem) {
   h2, .h2 {
     font-size: 36.65px;
     font-size: 3.665rem; } }
@@ -245,7 +245,7 @@ h3,
   font-size: 19.65px;
   font-size: 1.965rem; }
 
-@media screen and (min-width: 10.24rem) {
+@media screen and (min-width: 102.4rem) {
   h3,
   .h3 {
     font-size: 22.65px;
@@ -274,7 +274,7 @@ h3--second,
   font-size: 1rem;
   line-height: 1.6; }
 
-@media screen and (min-width: 10.24rem) {
+@media screen and (min-width: 102.4rem) {
   .text-sm {
     font-size: 12px;
     font-size: 1.2rem; } }
@@ -284,7 +284,7 @@ h3--second,
   font-size: 1.2rem;
   line-height: 1.6; }
 
-@media screen and (min-width: 10.24rem) {
+@media screen and (min-width: 102.4rem) {
   .text-md {
     font-size: 14px;
     font-size: 1.4rem; } }
@@ -328,7 +328,7 @@ h3--second,
 .text-right {
   text-align: right; }
 
-@media screen and (min-width: 10.24rem) {
+@media screen and (min-width: 102.4rem) {
   .text-lg-center {
     text-align: center; }
   .text-lg-left {
@@ -344,10 +344,13 @@ h3--second,
 
 /* COMPONENT */
 .button {
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.2;
   display: inline-block;
-  padding: 12px 18px;
-  box-shadow: 0px 1px 2px rgba(105, 81, 255, 0.05);
-  border-radius: 6px;
+  padding: 12px 24px;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
   border: 1px solid transparent;
   cursor: pointer;
   transition: 0.4s ease;
@@ -355,23 +358,28 @@ h3--second,
   /* BUTTON SHAPE */
   /* BUTTON TYPE */ }
 
-.button--small {
-  font-size: 14px;
-  font-size: 1.4rem;
-  line-height: 1.42;
-  padding: 8px 16px; }
-
 .button--large {
   font-size: 18px;
   font-size: 1.8rem;
   line-height: 1.56;
-  padding: 13px 28px; }
+  padding: 12px 14px; }
 
-@media screen and (max-width: 4.79rem) {
-  .button--responsive-sm {
-    font-size: 12px;
-    font-size: 1.2rem;
-    padding: 6px; } }
+@media screen and (min-width: 102.4rem) {
+  .button--large {
+    padding: 12px 40px; } }
+
+@media screen and (min-width: 120rem) {
+  .button--large {
+    padding: 12px 81px; } }
+
+.button--primary {
+  background-color: #000;
+  color: #fff; }
+
+.button--second {
+  border: 2px solid #000;
+  background-color: transparent;
+  color: #000; }
 
 .input {
   border-radius: 8px;
@@ -529,7 +537,7 @@ h3--second,
 .col-auto {
   width: auto; }
 
-@media screen and (min-width: 4.8rem) {
+@media screen and (min-width: 48rem) {
   .sm-inline-block {
     display: inline-block; }
   .sm-block {
@@ -592,7 +600,7 @@ h3--second,
   .col-sm-auto {
     width: auto; } }
 
-@media screen and (min-width: 7.68rem) {
+@media screen and (min-width: 768rem) {
   .md-inline-block {
     display: inline-block; }
   .md-block {
@@ -655,7 +663,7 @@ h3--second,
   .col-md-auto {
     width: auto; } }
 
-@media screen and (min-width: 10.24rem) {
+@media screen and (min-width: 102.4rem) {
   .lg-inline-block {
     display: inline-block; }
   .lg-block {
@@ -876,7 +884,7 @@ h3--second,
 .m-64 {
   margin: 64px; }
 
-@media screen and (min-width: 7.68rem) {
+@media screen and (min-width: 768rem) {
   .mx-md-auto {
     margin-right: auto;
     margin-left: auto; }
@@ -982,7 +990,7 @@ h3--second,
   .m-md-64 {
     margin: 64px; } }
 
-@media screen and (min-width: 10.24rem) {
+@media screen and (min-width: 102.4rem) {
   .mx-lg-auto {
     margin-right: auto;
     margin-left: auto; }
@@ -1397,7 +1405,7 @@ h3--second,
 .p-96 {
   padding: 96px; }
 
-@media screen and (min-width: 7.68rem) {
+@media screen and (min-width: 768rem) {
   .px-md-0 {
     padding-right: 0px;
     padding-left: 0px; }
@@ -1607,7 +1615,7 @@ h3--second,
   .p-md-96 {
     padding: 96px; } }
 
-@media screen and (min-width: 10.24rem) {
+@media screen and (min-width: 102.4rem) {
   .px-lg-0 {
     padding-right: 0px;
     padding-left: 0px; }
@@ -1944,11 +1952,11 @@ h3--second,
 .relative {
   position: relative; }
 
-@media screen and (max-width: 10.23rem) {
+@media screen and (max-width: 102.39rem) {
   .hide-mobile {
     display: none; } }
 
-@media screen and (min-width: 10.24rem) {
+@media screen and (min-width: 102.4rem) {
   .hide-desktop {
     display: none; } }
 

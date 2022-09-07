@@ -1,8 +1,9 @@
 .button {
+    @include font-size(14, 1.2);
     display: inline-block;
-    padding: 12px 18px;
+    padding: 12px 24px;
     box-shadow: $box-shadow-button;
-    border-radius: 6px;
+    border-radius: 8px;
     border: 1px solid transparent;
     cursor: pointer;
     transition: $transition-base;
@@ -10,26 +11,35 @@
     /* BUTTON SIZE */
 
     &--small {
-        @include font-size(14, 1.42);
-        padding: 8px 16px;
+        
     }
 
     &--large {
         @include font-size(18, 1.56);
-        padding: 13px 28px;
-    }
+        padding: 12px 14px;
 
-    &--responsive-sm {
-        @include mq($sm, max) {
-            @include font-size(12);
-            padding: 6px;
+        @include mq($lg) {
+            padding: 12px 40px;
+        }
+
+        @include mq($xl) {
+            padding: 12px 81px;
         }
     }
+
 
     /* BUTTON SHAPE */
 
     /* BUTTON TYPE */
 
     &--primary {
+        background-color: $bg-button-primary;
+        color: $color-button-primary;
+    }
+
+    &--second {
+        border: 2px solid $border-button;
+        background-color: transparent;
+        color: $color-dark;
     }
 }
