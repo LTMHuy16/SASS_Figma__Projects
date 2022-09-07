@@ -14,7 +14,12 @@
                 <div class="flex items-center">
                     <button class="header__toggle">
                         <span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(0, 0, 0, 1)">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                style="fill: rgba(0, 0, 0, 1)"
+                            >
                                 <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path>
                             </svg>
                         </span>
@@ -29,21 +34,43 @@
                     <div class="flex items-center ml-auto">
                         <button class="header__close">
                             <span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(0, 0, 0, 1)">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    style="fill: rgba(0, 0, 0, 1)"
+                                >
                                     <path
                                         d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"
                                     ></path>
                                 </svg>
                             </span>
                         </button>
-                        <ul class="header__navbar">
-                            <li>
-                                <a href="#">Episodes</a>
-                            </li>
-                        </ul>
-                        <div class="header__buttons">
-                            <a href="#" class="button button--second button--large">RECENT EPISODES</a>
-                            <a href="#" class="button button--primary">Subscribe</a>
+                        <div class="header__content">
+                            <ul class="header__navbar">
+                                <li>
+                                    <a href="#">Episodes</a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        About
+                                        <span>
+                                            <picture>
+                                                <img src="./src/image/arrow.svg" alt="" />
+                                            </picture>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">More</a>
+                                </li>
+                            </ul>
+                            <div class="header__buttons">
+                                <a href="#" class="button button--second button--large"
+                                    >RECENT EPISODES</a
+                                >
+                                <a href="#" class="button button--primary">Subscribe</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -126,15 +153,19 @@
                                 <img src="./src/image/thinking.svg" alt="" />
                             </picture>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, minima ipsum? Voluptas dolores
-                                iusto aspernatur sint officiis, laborum consequatur vel!
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Exercitationem, minima ipsum? Voluptas dolores iusto aspernatur sint
+                                officiis, laborum consequatur vel!
                             </p>
                         </div>
                         <div class="col-lg-6">
                             <picture>
                                 <img src="./src/image/bulb.svg" alt="" />
                             </picture>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, minima.</p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Exercitationem, minima.
+                            </p>
                         </div>
                     </div>
                     <div class="quote">
@@ -176,8 +207,8 @@
                             <img src="./src/image/comma.svg" alt="" />
                         </picture>
                         <p>
-                            Lorem ipsum dolor sit amet consectet piscing elit, sed do eiusmod tempor incidi ut labore et dolore magna
-                            aliqua.
+                            Lorem ipsum dolor sit amet consectet piscing elit, sed do eiusmod tempor
+                            incidi ut labore et dolore magna aliqua.
                         </p>
                         <div class="tesimonial__client">
                             <div class="tesimonial__poirtrait">
@@ -209,7 +240,10 @@
                                 <img src="./src/image/scribble.svg" alt="" />
                             </picture>
                             <h3>Topic by Request</h3>
-                            <p>Lorem ipsum dolor sit amet consectet pis cing elit, sed do eiusmod tempor.</p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectet pis cing elit, sed do eiusmod
+                                tempor.
+                            </p>
                         </div>
                     </div>
 
@@ -240,7 +274,8 @@
                                         <h3>Tesla Autopilot Controversy</h3>
                                         <div class="content__card-line"></div>
                                         <p class="content__card-desc">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Curabitur ac ultrices odio.
                                         </p>
                                     </div>
                                 </div>
@@ -254,12 +289,12 @@
                                         <div class="content__card-authors">
                                             <div class="content__card-author">
                                                 <picture>
-                                                    <img src="./src/image/hoster-1.jpg" alt="">
+                                                    <img src="./src/image/hoster-1.jpg" alt="" />
                                                 </picture>
                                             </div>
                                             <div class="content__card-author">
                                                 <picture>
-                                                    <img src="./src/image/hoster-2.jpg" alt="">
+                                                    <img src="./src/image/hoster-2.jpg" alt="" />
                                                 </picture>
                                             </div>
                                         </div>
@@ -275,21 +310,231 @@
                 </div>
             </section>
 
-            <section class="pricing">
+            <section class="service">
                 <div class="container">
                     <div class="section-header">
                         <h2>Become our sponsor</h2>
                         <p>Get exclusive episodes, merch and more</p>
                     </div>
 
-                    <div class="pricing__list lg-flex flex-lg-wrap">
+                    <div class="service__list lg-flex flex-lg-wrap">
                         <div class="col-lg-4">
-                            .
+                            <div class="price__info">
+                                <h3 class="price__name">Member</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectet cing elit, sed do eiusmod
+                                    tempor.
+                                </p>
+                                <div class="service__button">
+                                    <a href="#" class="button button--primary">Subscribe</a>
+                                    <div class="service__pricing">
+                                        <span>$9.99</span>
+                                        <span>/month</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service__benefits">
+                                <h4>What's included:</h4>
+                                <ul>
+                                    <li>Exclusive Content</li>
+                                    <li>5% Discount on Merch</li>
+                                    <li>Join the Community</li>
+                                    <li>Livestreaming Access</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="blogs">
+                <div class="container">
+                    <div class="lg-flex flex-wrap">
+                        <div class="col-lg-6">
+                            <div class="blog__card">
+                                <div class="blog__image">
+                                    <picture>
+                                        <img src="./src/image/seft-confidence.png" alt="" />
+                                    </picture>
+                                </div>
+                                <div class="blog__title">
+                                    <span class="blog__topic">POSTCARD</span>
+                                    <h3>Setup your own podcast</h3>
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                                    enim ad minimvel iam, quis nostrud exercitation ullamco
+                                    laboris...
+                                </p>
+                                <div class="blog__footnote">
+                                    <ul class="blog__tags">
+                                        <li>
+                                            <a href="#">business</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">startup</a>
+                                        </li>
+                                    </ul>
+                                    <span class="blog__date">Sep 14, 2021</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cta">
+                <div class="container">
+                    <div class="cta__content col-lg-6">
+                        <span class="cta__sub">BETA</span>
+                        <h2>Available now Pod of Cast App</h2>
+                        <p>We just launched our podcast app!</p>
+
+                        <div class="cta__button">
+                            <a href="#" class="button button--primary">DOWNLOAD NOW</a>
+                            <div class="cta__platform">
+                                <span>Content also available on:</span>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <picture>
+                                                <img src="./src/image/gg-mini-black.svg" alt="" />
+                                            </picture>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <picture>
+                                                <img
+                                                    src="./src/image/mini-sportify-black.svg"
+                                                    alt=""
+                                                />
+                                            </picture>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <picture>
+                                                <img
+                                                    src="./src/image/youtube-mini-black.svg"
+                                                    alt=""
+                                                />
+                                            </picture>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
         </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="sm-flex">
+                    <div class="col-lg-4">
+                        <div class="footer__logo">
+                            <picture>
+                                <img src="./src/image/footer-logo.svg" alt="" />
+                            </picture>
+                        </div>
+                        <p class="footer__desc">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                        <ul class="footer__socials">
+                            <li>
+                                <a href="#">
+                                    <picture>
+                                        <img src="./src/image/twitter.svg" alt="" />
+                                    </picture>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <picture>
+                                        <img src="./src/image/instagram.svg" alt="" />
+                                    </picture>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <picture>
+                                        <img src="./src/image/tiktok.svg" alt="" />
+                                    </picture>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2">
+                        <ul class="footer__links">
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Testimonial</a></li>
+                            <li><a href="#">Feature</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2">
+                        <ul class="footer__links">
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Testimonial</a></li>
+                            <li><a href="#">Feature</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="footer__platform">
+                            <span>Listen to episodes on your fav platform:</span>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <picture>
+                                            <img src="./src/image/postcard.svg" alt="" />
+                                        </picture>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <picture>
+                                            <img src="./src/image/spotify.svg" alt="" />
+                                        </picture>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <picture>
+                                            <img src="./src/image/youtube.svg" alt="" />
+                                        </picture>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__app">
+                            <span>App available on:</span>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <picture>
+                                            <img src="./src/image/ios.svg" alt="" />
+                                        </picture>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <picture>
+                                            <img src="./src/image/gg-play.svg" alt="" />
+                                        </picture>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="sm-flex">
+                    <p class="footer__right"></p>
+                    <a href="#" class="footer__terms">Terms and Pricy</a>
+                </div>
+            </div>
+        </footer>
 
         <script src="./src/dist/js/jquery.min.js"></script>
         <script src="./src/dist/js/main.min.js"></script>
