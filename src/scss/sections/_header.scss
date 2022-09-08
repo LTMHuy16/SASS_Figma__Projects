@@ -1,0 +1,71 @@
+.header {
+    @include mq($lg, max) {
+        &__menu {
+            @include position(fixed, 0, null, 0, -100%);
+            z-index: $z-index-fixed;
+            width: 100vw;
+            max-width: 35rem;
+            padding: 2.2rem 4rem;
+            background-color: $color-light;
+            box-shadow: $box-shadow-navbar;
+            transition: $transition-base;
+
+            &.is-open {
+                left: 0;
+            }
+        }
+
+        &__navbar {
+            padding: {
+                bottom: 2rem;
+                top: 2rem;
+            }
+        }
+
+        &__link {
+            @include font-size(20);
+            display: flex;
+            align-items: center;
+            padding: {
+                top: 1.2rem;
+                bottom: 1.2rem;
+            }
+
+            &-icon {
+                padding-left: 1rem;
+            }
+        }
+
+        &__sub {
+            height: 0;
+            overflow: hidden;
+            pointer-events: none;
+            transition: $transition-base;
+
+            &.is-open {
+                height: auto;
+                pointer-events: auto;
+                padding: {
+                    left: 1.8rem;
+                    top: 1.2rem;
+                    bottom: 1.2rem;
+                }
+            }
+
+            &-link {
+                @include font-size(20);
+                display: inline-block;
+                padding: {
+                    top: 1.2rem;
+                    bottom: 1.2rem;
+                }
+            }
+        }
+
+        &__button {
+            &:first-child {
+                margin-bottom: 1.6rem;
+            }
+        }
+    }
+}

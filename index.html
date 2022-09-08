@@ -11,8 +11,8 @@
     <body>
         <header id="header" class="header">
             <div class="container">
-                <div class="flex items-center">
-                    <button class="header__toggle">
+                <div class="flex items-center justify-between">
+                    <button class="button--icon js-open-menu">
                         <span>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -31,8 +31,8 @@
                         </picture>
                     </div>
 
-                    <div class="flex items-center ml-auto">
-                        <button class="header__close">
+                    <div class="header__menu lg-flex items-lg-center ml-auto js-header-menu">
+                        <button class="button--icon block ml-auto js-close-menu">
                             <span>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -46,32 +46,43 @@
                                 </svg>
                             </span>
                         </button>
-                        <div class="header__content">
+                        <nav class="header__content">
                             <ul class="header__navbar">
                                 <li>
-                                    <a href="#">Episodes</a>
+                                    <a class="header__link" href="#">Episodes</a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a class="header__link js-menu-parent" href="#">
                                         About
-                                        <span>
+                                        <span class="header__link-icon">
                                             <picture>
                                                 <img src="./src/image/arrow.svg" alt="" />
                                             </picture>
                                         </span>
                                     </a>
+                                    <ul class="header__sub is-open">
+                                        <li>
+                                            <a class="header__sub-link" href="#">About 1</a>
+                                        </li>
+                                        <li>
+                                            <a class="header__sub-link" href="#">About 2</a>
+                                        </li>
+                                        <li>
+                                            <a class="header__sub-link" href="#">About 3</a>
+                                        </li>
+                                    </ul>
                                 </li>
                                 <li>
-                                    <a href="#">More</a>
+                                    <a class="header__link" href="#">More</a>
                                 </li>
                             </ul>
                             <div class="header__buttons">
-                                <a href="#" class="button button--second button--large"
+                                <a href="#" class="header__button button button--second button--large"
                                     >RECENT EPISODES</a
                                 >
-                                <a href="#" class="button button--primary">Subscribe</a>
+                                <a href="#" class="header__button button button--primary">Subscribe</a>
                             </div>
-                        </div>
+                        </nav>
                     </div>
                 </div>
             </div>
