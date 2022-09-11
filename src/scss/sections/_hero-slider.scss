@@ -1,0 +1,48 @@
+.slider {
+    overflow: hidden;
+
+    &__outer {
+        &.visible {
+            overflow: visible;
+        }
+    }
+
+    &__item {
+        @include img-ratio($ratio--1-1);
+        position: relative;
+        background-color: $color-light;
+        border-radius: 1.2rem;
+    }
+
+    &__img {
+        @include position(absolute, 0, 0, 0, 0);
+        
+        img {
+            border-radius: 1.2rem;
+        }
+    }
+
+    &__content {
+        @include position(absolute, 0, 0, 0, 0);
+        padding: 2rem;
+    }
+
+    &__socials {
+        &-link {
+            display: inline-block;
+            padding: {
+                left: 0.5rem;
+                right: 0.5rem;
+            };
+        }
+    }
+
+    &__title {
+        @include font-size(26, 1.2);
+        letter-spacing: -0.08rem;
+
+        @include mq($lg) {
+            @include font-size(36.65);
+        }
+    }
+}

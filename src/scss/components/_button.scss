@@ -1,7 +1,7 @@
 .button {
     @include font-size(14, 1.2);
     display: inline-block;
-    padding: 12px 24px;
+    padding: 1.1rem 2.4rem;
     box-shadow: $box-shadow-button;
     border-radius: 8px;
     border: 1px solid transparent;
@@ -15,15 +15,20 @@
     }
 
     &--large {
-        @include font-size(18, 1.56);
-        padding: 12px 14px;
+        padding: 1rem 1.4rem;
 
         @include mq($lg) {
-            padding: 12px 40px;
+            padding: {
+                left: 3rem;
+                right: 3rem;
+            };
         }
 
         @include mq($xl) {
-            padding: 12px 81px;
+            padding: {
+                left: 8.1rem;
+                right: 8.1rem;
+            };
         }
     }
 

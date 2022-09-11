@@ -8,13 +8,13 @@ body {
     font-family: $font-body;
     font-weight: $font-body-weight;
 
-    @include mq($md) {
+    @include mq($lg) {
         @include font-size(16);
     }
 }
 
 a {
-    color: $color-base;
+    color: inherit;
 
     &:hover {
         color: $color-red-light;

@@ -1,0 +1,46 @@
+.partners {
+    padding: {
+        top: 4rem;
+        bottom: 4rem;
+    }
+
+    @include mq($lg) {
+        padding: {
+            top: 12rem;
+            bottom: 12rem;
+        }
+    }
+
+    &__inner {
+        padding: {
+            top: 1rem;
+            bottom: 1rem;
+        }
+        border-top: 1.5px solid $color-grey;
+        border-bottom: 1.5px solid $color-grey;
+
+        @include mq($lg) {
+            padding: {
+                top: 4rem;
+                bottom: 4rem;
+            }
+        }
+    }
+
+    &__item {
+        padding-top: 1.2rem;
+
+        @include mq($lg) {
+            padding-top: 0;
+        }
+    }
+
+    &__text {
+        letter-spacing: -0.02rem;
+        line-height: 1.4;
+
+        @include mq($lg) {
+            @include font-size(22.65);
+        }
+    }
+}

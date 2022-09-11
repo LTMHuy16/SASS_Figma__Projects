@@ -17,20 +17,6 @@
     -webkit-line-clamp: $max-lines;
 }
 
-@mixin responsive-ratio($number, $pseudo: false) {
-    $padding: unquote((number) * 100 + "%");
-
-    @if $pseudo {
-        &:before {
-            @include pseudo($pos: relative);
-
-            width: 100%;
-            padding-top: $padding;
-        }
-    } @else {
-    }
-}
-
 @mixin position($type: static, $top: null, $right: null, $bottom: null, $left: null) {
     @if ($type == static or $type == relative or $type == absolute or $type == fixed) {
         position: $type;
@@ -51,7 +37,6 @@
             padding-top: $padding;
         }
     } @else {
-        position: relative;
         width: 100%;
         padding-top: $padding;
     }

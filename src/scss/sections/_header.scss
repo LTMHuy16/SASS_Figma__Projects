@@ -1,7 +1,26 @@
 .header {
+    $self: &;
+
     @include mq($lg, max) {
+        padding: {
+            top: 1.8rem;
+            bottom: 1.8rem;
+        }
+
+        &__logo {
+            max-width: 5rem;
+            margin: {
+                left: auto;
+                right: auto;
+            }
+        }
+
+        &__toggle {
+            padding: 0.4rem;
+        }
+
         &__menu {
-            @include position(fixed, 0, null, 0, -100%);
+            @include position(fixed, 0, null, 0, -40rem);
             z-index: $z-index-fixed;
             width: 100vw;
             max-width: 35rem;
@@ -24,8 +43,6 @@
 
         &__link {
             @include font-size(20);
-            display: flex;
-            align-items: center;
             padding: {
                 top: 1.2rem;
                 bottom: 1.2rem;
@@ -37,19 +54,21 @@
         }
 
         &__sub {
-            height: 0;
             overflow: hidden;
+            height: 0;
+            padding: {
+                left: 1.8rem;
+            }
             pointer-events: none;
-            transition: $transition-base;
+            transition: height 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
             &.is-open {
                 height: auto;
-                pointer-events: auto;
                 padding: {
-                    left: 1.8rem;
                     top: 1.2rem;
                     bottom: 1.2rem;
                 }
+                pointer-events: auto;
             }
 
             &-link {
@@ -63,8 +82,87 @@
         }
 
         &__button {
-            &:first-child {
+            &:not(:last-child) {
                 margin-bottom: 1.6rem;
+            }
+        }
+    }
+
+    @include mq($lg) {
+        padding: {
+            top: 1.2rem;
+            bottom: 1.2rem;
+        }
+        transition: $transition-base;
+
+        &.fixed {
+            @include position(fixed, 0, 0, null, 0);
+            z-index: $z-index-fixed;
+            padding: {
+                top: 0.4rem;
+                bottom: 0.4rem;
+            }
+            background-color: $color-light;
+            box-shadow: $box-shadow-navbar;
+        }
+
+        &__logo {
+            margin-left: 0;
+        }
+
+        &__item {
+            position: relative;
+
+            &:hover #{$self}__sub {
+                opacity: 1;
+                pointer-events: auto;
+            }
+        }
+
+        &__link {
+            padding: {
+                left: 1.6rem;
+                right: 1.6rem;
+            }
+            font-weight: 700;
+
+            &-icon {
+                margin-left: 0.5rem;
+                padding: 0.33rem;
+                border-radius: 50%;
+                border: 1.5px solid rgba(0, 0, 0, 0.4);
+            }
+        }
+
+        &__sub {
+            @include position(absolute, 100%, null, null, 0);
+            z-index: $z-index-fixed;
+            min-width: 12rem;
+            padding: {
+                top: 1.2rem;
+                right: 1.6rem;
+                bottom: 1.2rem;
+                left: 1.6rem;
+            }
+            border-radius: 6px;
+            background-color: $color-light;
+            opacity: 0;
+            pointer-events: none;
+            box-shadow: $box-shadow-submenu;
+            transition: opacity 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+            &-link {
+                display: inline-block;
+                padding: {
+                    top: 0.4rem;
+                    bottom: 0.4rem;
+                }
+            }
+        }
+
+        &__button {
+            &:not(:last-child) {
+                margin-right: 2rem;
             }
         }
     }

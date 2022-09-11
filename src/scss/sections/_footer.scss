@@ -1,0 +1,13 @@
+.fullscreen-overlay {
+    @include position(fixed, 0, 0, 0, 0);
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    opacity: 0;
+    pointer-events: none;
+    z-index: $z-index-overlay;
+    transition: $transition-base;
+
+    &.is-open {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}

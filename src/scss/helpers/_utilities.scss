@@ -15,9 +15,19 @@
 }
 
 /* BACKGROUND COLOR */
+.bg {
+    &-pink {
+        background-color: $color-pink;
+    }
+}
 
 
 /* SECTION */
 
 
 /* IMAGE */
+.cover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

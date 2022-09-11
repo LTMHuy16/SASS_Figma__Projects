@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600;700&display=swap");
 
 h1,
 h2,
@@ -21,12 +21,11 @@ h1,
     }
 }
 
-h2, .h2
-{
+h2,
+.h2 {
     @include font-size(30);
 
-    @include mq($lg)
-    {
+    @include mq($lg) {
         @include font-size(36.65);
     }
 
@@ -59,18 +58,15 @@ h3,
     }
 }
 
-
 .text {
     /* SIZE */
 
     &-sm {
         @include font-size(10, 1.6);
 
-
         @include mq($lg) {
             @include font-size(12);
         }
-
     }
 
     &-md {
@@ -78,6 +74,15 @@ h3,
 
         @include mq($lg) {
             @include font-size(14);
+        }
+    }
+
+    &-heading {
+        @include font-size(68, 1);
+        letter-spacing: -0.4rem;
+
+        @include mq($lg) {
+            @include font-size(96);
         }
     }
 

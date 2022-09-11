@@ -20,13 +20,6 @@ $spacing: 8;
             margin-right: auto;
         }
 
-        .my-#{$name}auto {
-            margin: {
-                top: auto;
-                bottom: auto;
-            };
-        }
-
         .mt-#{$name}auto {
             margin-top: auto;
         }
@@ -34,30 +27,31 @@ $spacing: 8;
         .mb-#{$name}auto {
             margin-bottom: auto;
         }
+        
 
-        @for $i from 0 to 9 {
-            $marNumber: $i * $spacing + px;
+        // @for $i from 0 to 9 {
+        //     $marNumber: $i * $spacing + px;
 
-            .mt-#{$name}#{$i * $spacing} {
-                margin-top: $marNumber;
-            }
+        //     .mt-#{$name}#{$i * $spacing} {
+        //         margin-top: $marNumber;
+        //     }
 
-            .mb-#{$name}#{$i * $spacing} {
-                margin-bottom: $marNumber;
-            }
+        //     .mb-#{$name}#{$i * $spacing} {
+        //         margin-bottom: $marNumber;
+        //     }
 
-            .mr-#{$name}#{$i * $spacing} {
-                margin-right: $marNumber;
-            }
+        //     .mr-#{$name}#{$i * $spacing} {
+        //         margin-right: $marNumber;
+        //     }
 
-            .ml-#{$name}#{$i * $spacing} {
-                margin-left: $marNumber;
-            }
+        //     .ml-#{$name}#{$i * $spacing} {
+        //         margin-left: $marNumber;
+        //     }
 
-            .m-#{$name}#{$i * $spacing} {
-                margin: $marNumber;
-            }
-        }
+        //     .m-#{$name}#{$i * $spacing} {
+        //         margin: $marNumber;
+        //     }
+        // }
     }
 }
 
@@ -72,91 +66,91 @@ $spacing: 8;
 
 =================================*/
 
-@each $name, $breakpoint in $spacing-breakpoints {
-    @if $breakpoint != $lg {
-        @include mq($breakpoint) {
-            @for $i from 0 to 13 {
-                $padNumber: $i * $spacing + px;
+// @each $name, $breakpoint in $spacing-breakpoints {
+//     @if $breakpoint != $lg {
+//         @include mq($breakpoint) {
+//             @for $i from 0 to 13 {
+//                 $padNumber: $i * $spacing + px;
 
-                .px-#{$name}#{$i * $spacing} {
-                    padding: {
-                        right: $padNumber;
-                        left: $padNumber;
-                    }
-                }
+//                 .px-#{$name}#{$i * $spacing} {
+//                     padding: {
+//                         right: $padNumber;
+//                         left: $padNumber;
+//                     }
+//                 }
 
-                .pr-#{$name}#{$i * $spacing} {
-                    padding-right: $padNumber;
-                }
+//                 .pr-#{$name}#{$i * $spacing} {
+//                     padding-right: $padNumber;
+//                 }
 
-                .pl-#{$name}#{$i * $spacing} {
-                    padding-left: $padNumber;
-                }
+//                 .pl-#{$name}#{$i * $spacing} {
+//                     padding-left: $padNumber;
+//                 }
 
-                .pt-#{$name}#{$i * $spacing} {
-                    padding-top: $padNumber;
-                }
+//                 .pt-#{$name}#{$i * $spacing} {
+//                     padding-top: $padNumber;
+//                 }
 
-                .pb-#{$name}#{$i * $spacing} {
-                    padding-bottom: $padNumber;
-                }
+//                 .pb-#{$name}#{$i * $spacing} {
+//                     padding-bottom: $padNumber;
+//                 }
 
-                .py-#{$name}#{$i * $spacing} {
-                    padding: {
-                        bottom: $padNumber;
-                        top: $padNumber;
-                    }
-                }
+//                 .py-#{$name}#{$i * $spacing} {
+//                     padding: {
+//                         bottom: $padNumber;
+//                         top: $padNumber;
+//                     }
+//                 }
 
-                .p-#{$name}#{$i * $spacing} {
-                    padding: $padNumber;
-                }
-            }
-        }
-    } @else {
+//                 .p-#{$name}#{$i * $spacing} {
+//                     padding: $padNumber;
+//                 }
+//             }
+//         }
+//     } @else {
         
-        @include mq($lg) {
-            @for $i from 0 to 12 {
-                $padNumber: $i * $spacing + px;
+//         @include mq($lg) {
+//             @for $i from 0 to 12 {
+//                 $padNumber: $i * $spacing + px;
 
-                .px-#{$name}#{$i * $spacing} {
-                    padding: {
-                        right: $padNumber;
-                        left: $padNumber;
-                    }
-                }
+//                 .px-#{$name}#{$i * $spacing} {
+//                     padding: {
+//                         right: $padNumber;
+//                         left: $padNumber;
+//                     }
+//                 }
 
-                .pr-#{$name}#{$i * $spacing} {
-                    padding-right: $padNumber;
-                }
+//                 .pr-#{$name}#{$i * $spacing} {
+//                     padding-right: $padNumber;
+//                 }
 
-                .pl-#{$name}#{$i * $spacing} {
-                    padding-left: $padNumber;
-                }
+//                 .pl-#{$name}#{$i * $spacing} {
+//                     padding-left: $padNumber;
+//                 }
 
-                .p-#{$name}#{$i * $spacing} {
-                    padding: $padNumber;
-                }
-            }
+//                 .p-#{$name}#{$i * $spacing} {
+//                     padding: $padNumber;
+//                 }
+//             }
 
-            @for $i from 0 to 32 {
-                $padNumber: $i * $spacing + px;
+//             @for $i from 0 to 32 {
+//                 $padNumber: $i * $spacing + px;
 
-                .pt-#{$name}#{$i * $spacing} {
-                    padding-top: $padNumber;
-                }
+//                 .pt-#{$name}#{$i * $spacing} {
+//                     padding-top: $padNumber;
+//                 }
 
-                .pb-#{$name}#{$i * $spacing} {
-                    padding-bottom: $padNumber;
-                }
+//                 .pb-#{$name}#{$i * $spacing} {
+//                     padding-bottom: $padNumber;
+//                 }
 
-                .py-#{$name}#{$i * $spacing} {
-                    padding: {
-                        bottom: $padNumber;
-                        top: $padNumber;
-                    }
-                }
-            }
-        }
-    }
-}
+//                 .py-#{$name}#{$i * $spacing} {
+//                     padding: {
+//                         bottom: $padNumber;
+//                         top: $padNumber;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }

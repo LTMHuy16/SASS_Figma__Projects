@@ -12,7 +12,7 @@
         @else 
         {
             @if $type == max {
-                $viewports: $viewports - 0.01;
+                $viewports: $viewports - 1;
             }
 
             @media screen and (#{$type}-#{$dir}: $viewports) {
@@ -22,7 +22,7 @@
 
     } @else {
 
-        @media screen and ($min: nth($viewports, 1)) and ($max: (nth($viewports, 2) - 0.01)) {
+        @media screen and ($min: nth($viewports, 1)) and ($max: (nth($viewports, 2) - 1)) {
             @content;
         }
 

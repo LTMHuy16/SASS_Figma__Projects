@@ -6,13 +6,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Post Card</title>
 
+        <link rel="stylesheet" href="./src/dist/css/owl.carousel.min.css" />
         <link rel="stylesheet" href="./src/dist/css/main.min.css" />
     </head>
     <body>
-        <header id="header" class="header">
+        <header id="header" class="header js-header bg-pink">
             <div class="container">
-                <div class="flex items-center justify-between">
-                    <button class="button--icon js-open-menu">
+                <div class="flex items-center">
+                    <button class="header__toggle button--icon js-open-menu hide-desktop">
                         <span>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -25,14 +26,14 @@
                         </span>
                     </button>
 
-                    <div class="header__logo">
+                    <div class="header__logo col-lg-2">
                         <picture>
-                            <img src="./src/image/logo.svg" alt="Logo" />
+                            <img srcset="./src/image/logo.png 2x" alt="Logo" />
                         </picture>
                     </div>
 
-                    <div class="header__menu lg-flex items-lg-center ml-auto js-header-menu">
-                        <button class="button--icon block ml-auto js-close-menu">
+                    <div class="header__menu lg-flex items-lg-center flex-lg-1 js-header-menu">
+                        <button class="button--icon block ml-auto hide-desktop js-close-menu">
                             <span>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -46,13 +47,13 @@
                                 </svg>
                             </span>
                         </button>
-                        <nav class="header__content">
-                            <ul class="header__navbar">
-                                <li>
-                                    <a class="header__link" href="#">Episodes</a>
+                        <nav class="header__content lg-flex items-lg-center flex-lg-1">
+                            <ul class="header__navbar lg-flex flex-wrap">
+                                <li class="header__item">
+                                    <a class="header__link flex items-center" href="#">Episodes</a>
                                 </li>
-                                <li>
-                                    <a class="header__link js-menu-parent" href="#">
+                                <li class="header__item">
+                                    <a class="header__link flex items-center js-menu-link" href="#">
                                         About
                                         <span class="header__link-icon">
                                             <picture>
@@ -60,7 +61,7 @@
                                             </picture>
                                         </span>
                                     </a>
-                                    <ul class="header__sub is-open">
+                                    <ul class="header__sub">
                                         <li>
                                             <a class="header__sub-link" href="#">About 1</a>
                                         </li>
@@ -72,15 +73,19 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li>
-                                    <a class="header__link" href="#">More</a>
+                                <li class="header__item">
+                                    <a class="header__link flex items-center" href="#">More</a>
                                 </li>
                             </ul>
-                            <div class="header__buttons">
-                                <a href="#" class="header__button button button--second button--large"
+                            <div class="header__buttons ml-auto">
+                                <a
+                                    href="#"
+                                    class="header__button button button--second button--large"
                                     >RECENT EPISODES</a
                                 >
-                                <a href="#" class="header__button button button--primary">Subscribe</a>
+                                <a href="#" class="header__button button button--primary"
+                                    >Subscribe</a
+                                >
                             </div>
                         </nav>
                     </div>
@@ -89,66 +94,212 @@
         </header>
 
         <main>
-            <section class="hero">
+            <section class="hero bg-pink">
+                <div class="container hero__decor hero__decor--right hero__decor--left">
+                    <div class="hero__content col-lg-6 mx-auto">
+                        <h1 class="hero__heading text-heading text-center">
+                            Your Daily <span class="text-red-light">Podcast</span>
+                        </h1>
+                        <p class="hero__desc mx-auto text-center">
+                            We cover all kinds of categories and a weekly special guest.
+                        </p>
+                        <div class="flex items-center justify-center">
+                            <a href="#" class="button button--primary">SUBSCRIBE</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="slider bg-pink">
                 <div class="container">
-                    <div class="hero__content">
-                        <h1>Your Daily <span class="text-red-light">Podcast</span></h1>
-                        <p>We cover all kinds of categories and a weekly special guest.</p>
-                        <button class="button button--primary">SUBSCRIBE</button>
-                    </div>
+                    <ul class="js-active-carousel owl-carousel">
+                        <li class="slider__item">
+                            <picture class="slider__img">
+                                <img
+                                    class="cover-img"
+                                    srcset="./src/image/slider-1.jpg 2x"
+                                    alt=""
+                                />
+                            </picture>
+                            <div class="slider__content flex flex-col">
+                                <ul class="slider__socials flex items-center">
+                                    <li>
+                                        <a href="#" class="slider__socials-link">
+                                            <span>
+                                                <picture>
+                                                    <img
+                                                        src="./src/image/postcard-icon.svg"
+                                                        alt=""
+                                                    />
+                                                </picture>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="slider__socials-link">
+                                            <span>
+                                                <picture>
+                                                    <img
+                                                        src="./src/image/spotify-icon.svg"
+                                                        alt=""
+                                                    />
+                                                </picture>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="slider__socials-link">
+                                            <span>
+                                                <picture>
+                                                    <img
+                                                        src="./src/image/youtube-icon.svg"
+                                                        alt=""
+                                                    />
+                                                </picture>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <h3 class="slider__title text-blue mt-auto">
+                                    <a href="#">Self-confidence</a>
+                                </h3>
+                            </div>
+                        </li>
+                        <li class="slider__item">
+                            <picture class="slider__img">
+                                <img
+                                    class="cover-img"
+                                    srcset="./src/image/slider-2.jpg 2x"
+                                    alt=""
+                                />
+                            </picture>
+                            <div class="slider__content flex flex-col">
+                                <ul class="slider__socials flex items-center">
+                                    <li>
+                                        <a href="#" class="slider__socials-link">
+                                            <span>
+                                                <picture>
+                                                    <img
+                                                        src="./src/image/postcard-icon.svg"
+                                                        alt=""
+                                                    />
+                                                </picture>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="slider__socials-link">
+                                            <span>
+                                                <picture>
+                                                    <img
+                                                        src="./src/image/spotify-icon.svg"
+                                                        alt=""
+                                                    />
+                                                </picture>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="slider__socials-link">
+                                            <span>
+                                                <picture>
+                                                    <img
+                                                        src="./src/image/youtube-icon.svg"
+                                                        alt=""
+                                                    />
+                                                </picture>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <h3 class="slider__title text-blue mt-auto">
+                                    <a href="#">Perplexed Mind</a>
+                                </h3>
+                            </div>
+                        </li>
+                        <li class="slider__item">
+                            <picture class="slider__img">
+                                <img
+                                    class="cover-img"
+                                    srcset="./src/image/slider-3.jpg 2x"
+                                    alt=""
+                                />
+                            </picture>
+                            <div class="slider__content flex flex-col">
+                                <ul class="slider__socials flex items-center">
+                                    <li>
+                                        <a href="#" class="slider__socials-link">
+                                            <span>
+                                                <picture>
+                                                    <img
+                                                        src="./src/image/postcard-icon.svg"
+                                                        alt=""
+                                                    />
+                                                </picture>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="slider__socials-link">
+                                            <span>
+                                                <picture>
+                                                    <img
+                                                        src="./src/image/spotify-icon.svg"
+                                                        alt=""
+                                                    />
+                                                </picture>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="slider__socials-link">
+                                            <span>
+                                                <picture>
+                                                    <img
+                                                        src="./src/image/youtube-icon.svg"
+                                                        alt=""
+                                                    />
+                                                </picture>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <h3 class="slider__title text-blue mt-auto">
+                                    <a href="#">Women's Rights</a>
+                                </h3>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
 
-                    <div class="hero__slider hero__slider--carousel">
-                        <div class="hero__item">
-                            <picture>
-                                <img src="./src/image/man.png" alt="" />
-                            </picture>
-                        </div>
-                        <div class="hero__item">
-                            <picture>
-                                <img src="./src/image/covid-19.png" alt="" />
-                            </picture>
-                        </div>
-                        <div class="hero__item">
-                            <picture>
-                                <img src="./src/image/womens.png" alt="" />
-                            </picture>
-                        </div>
-                        <div class="hero__item">
-                            <picture>
-                                <img src="./src/image/mind.png" alt="" />
-                            </picture>
-                        </div>
-                        <div class="hero__item">
-                            <picture>
-                                <img src="./src/image/tesla.png" alt="" />
-                            </picture>
-                        </div>
-                        <div class="hero__item">
-                            <picture>
-                                <img src="./src/image/seft-confidence.png" alt="" />
-                            </picture>
-                        </div>
-                    </div>
-
-                    <div class="hero__partners">
-                        <ul>
-                            <li class="col-sm-6 col-lg-3">
-                                <span>Supported by:</span>
+            <section class="partners bg-pink">
+                <div class="container">
+                    <div class="partners__inner">
+                        <ul class="sm-flex flex-sm-wrap items-center">
+                            <li class="partners__item col-sm-6 col-md-3 text-center text-lg-left">
+                                <span class="partners__text text-700">Supported by:</span>
                             </li>
-                            <li class="col-sm-6 col-lg-3">
-                                <picture>
-                                    <img src="./src/image/spotify.svg" alt="" />
-                                </picture>
+                            <li class="partners__item col-sm-6 col-md-3 flex justify-center">
+                                <a href="#">
+                                    <picture class="inline-block">
+                                        <img src="./src/image/spotify.svg" alt="" />
+                                    </picture>
+                                </a>
                             </li>
-                            <li class="col-sm-6 col-lg-3">
-                                <picture>
-                                    <img src="./src/image/postcard.svg" alt="" />
-                                </picture>
+                            <li class="partners__item col-sm-6 col-md-3 flex justify-center">
+                                <a href="#">
+                                    <picture class="inline-block">
+                                        <img src="./src/image/postcard.svg" alt="" />
+                                    </picture>
+                                </a>
                             </li>
-                            <li class="col-sm-6 col-lg-3">
-                                <picture>
-                                    <img src="./src/image/youtube.svg" alt="" />
-                                </picture>
+                            <li class="partners__item col-sm-6 col-md-3 flex justify-center">
+                                <a href="#">
+                                    <picture class="inline-block">
+                                        <img src="./src/image/youtube.svg" alt="" />
+                                    </picture>
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -547,7 +698,10 @@
             </div>
         </footer>
 
+        <div class="fullscreen-overlay js-overlay"></div>
+
         <script src="./src/dist/js/jquery.min.js"></script>
+        <script src="./src/dist/js/owl.carousel.min.js"></script>
         <script src="./src/dist/js/main.min.js"></script>
     </body>
 </html>
