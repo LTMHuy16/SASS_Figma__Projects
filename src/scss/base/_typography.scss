@@ -12,20 +12,28 @@ h6 {
 
 h1,
 .h1 {
-    @include font-size(48, 1.2);
+    @include font-size(32, 1.2);
     font-weight: 700;
     letter-spacing: -0.2rem;
 
-    @include mq($lg) {
+    @include mq($mq-tab) {
+        @include font-size(40);
+    }
+
+    @include mq($mq-desk) {
         @include font-size(59.3);
     }
 }
 
 h2,
 .h2 {
-    @include font-size(30);
+    @include font-size(26);
 
-    @include mq($lg) {
+    @include mq($mq-tab) {
+        @include font-size(32);
+    }
+
+    @include mq($mq-desk) {
         @include font-size(36.65);
     }
 
@@ -42,37 +50,32 @@ h3,
 .h3 {
     @include font-size(19.65);
 
-    @include mq($lg) {
+    @include mq($mq-desk) {
         @include font-size(22.65);
     }
+}
 
+.h3 {
     &--main {
         line-height: 1.4;
-        font-weight: 500;
-    }
-
-    &--second {
-        line-height: 1.6;
-        font-weight: 700;
-        letter-spacing: -0.2rem;
     }
 }
 
 .text {
     /* SIZE */
 
-    &-sm {
-        @include font-size(10, 1.6);
+    &-ssm {
+        @include font-size(10);
 
-        @include mq($lg) {
+        @include mq($mq-desk) {
             @include font-size(12);
         }
     }
 
-    &-md {
-        @include font-size(12, 1.6);
+    &-sm {
+        @include font-size(12);
 
-        @include mq($lg) {
+        @include mq($mq-desk) {
             @include font-size(14);
         }
     }
@@ -81,7 +84,7 @@ h3,
         @include font-size(68, 1);
         letter-spacing: -0.4rem;
 
-        @include mq($lg) {
+        @include mq($mq-desk) {
             @include font-size(96);
         }
     }
@@ -144,7 +147,7 @@ h3,
         text-align: right;
     }
 
-    @include mq($lg) {
+    @include mq($mq-desk) {
         &-lg-center {
             text-align: center;
         }

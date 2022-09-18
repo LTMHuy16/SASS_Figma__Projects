@@ -1,15 +1,15 @@
 @each $name, $breakpoint in $breakpoints {
     @include mq($breakpoint) {
-        .#{$name}inline-block {
-            display: inline-block;
-        }
-
-        .#{$name}block {
-            display: block;
-        }
-
         .#{$name}flex {
             display: flex;
+            flex-wrap: wrap;
+
+            &--gutter {
+                margin: {
+                    right: -1rem;
+                    left: -1rem;
+                }
+            }
         }
 
         .flex-#{$name}1 {
@@ -24,36 +24,12 @@
             flex-direction: column;
         }
 
-        .flex-#{$name}col-reverse {
-            flex-direction: column-reverse;
-        }
-
-        .flex-#{$name}wrap {
-            flex-wrap: wrap;
-        }
-
-        .justify-#{$name}start {
-            justify-content: flex-start;
+        .flex-#{$name}no-wrap {
+            flex-wrap: nowrap;
         }
 
         .justify-#{$name}center {
             justify-content: center;
-        }
-
-        .justify-#{$name}end {
-            justify-content: flex-end;
-        }
-
-        .justify-#{$name}between {
-            justify-content: space-between;
-        }
-
-        .items-#{$name}start {
-            align-items: flex-start;
-        }
-
-        .items-#{$name}end {
-            align-items: flex-end;
         }
 
         .items-#{$name}center {
@@ -64,19 +40,28 @@
             order: 1;
         }
 
-        @for $i from 1 to 13 {
-            .col-#{$name}#{$i} {
-                width: 100% / $grid-columns * $i;
+        @if $breakpoint != 0 {
+            [class*="col-#{$name}"] {
+                padding: {
+                    right: 1rem;
+                    left: 1rem;
+                }
             }
-        }
 
-        /* Use in row with 5 columns */
-        .col-#{$name}20 {
-            width: 20%;
-        }
-
-        .col-#{$name}auto {
-            width: auto;
+            @for $i from 1 to 7 {
+                .col-#{$name}#{$i} {
+                    width: 100% / $grid-columns * $i;
+                }
+            }
+    
+            /* Use in row with 5 columns */
+            .col-#{$name}20 {
+                width: 20%;
+            }
+    
+            .col-#{$name}auto {
+                width: auto;
+            }   
         }
     }
 }

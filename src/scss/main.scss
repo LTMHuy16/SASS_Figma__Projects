@@ -26,6 +26,8 @@
 
 @import "./components/image";
 
+@import "./components/owl-carousel";
+
 /* HELPERS */
 
 @import "./helpers/grid";
@@ -45,5 +47,11 @@
 @import "./sections/partners";
 
 @import "./sections/about";
+
+@import "./sections/testimonial";
+
+@import "./sections/memberships";
+
+@import "./sections/episodes";
 
 @import "./sections/footer";

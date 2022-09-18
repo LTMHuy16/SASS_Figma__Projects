@@ -1,15 +1,11 @@
-.relative {
-    position: relative;
-}
-
 .hide-mobile {
-    @include mq($lg, max) {
+    @include mq($mq-desk, max) {
         display: none;
     }
 }
 
 .hide-desktop {
-    @include mq($lg) {
+    @include mq($mq-desk) {
         display: none;
     }
 }
@@ -21,13 +17,51 @@
     }
 }
 
-
 /* SECTION */
+.section-decor {
+    position: relative;
+}
 
+.section {
+    padding: {
+        top: 4rem;
+        bottom: 4rem;
+    }
+
+    @include mq($mq-desk) {
+        padding: {
+            top: 14rem;
+            bottom: 14rem;
+        }
+    }
+
+    &__header {
+        max-width: 73.6rem;
+        margin: 0 auto;
+    }
+
+    &__title {
+        margin-bottom: 2rem;
+    }
+}
 
 /* IMAGE */
-.cover-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.image {
+    &--cover {
+        object-fit: cover;
+    }
+
+    &--contain {
+        object-fit: contain;
+    }
+
+    &--full-width {
+        width: 100%;
+    }
+
+    &--full {
+        @include position(absolute, 0, null, null, 0);
+        width: 100%;
+        height: 100%;
+    }
 }

@@ -1,0 +1,48 @@
+.owl {
+    &-outer {
+        &--visible {
+            overflow: visible;
+        }
+    }
+
+    &-left-overflow {
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
+    &-container {
+        max-width: $grid-max-width;
+        padding: 0.4rem;
+    }
+
+    &-nav {
+        display: none;
+
+        @include mq($mq-desk) {
+            display: flex;
+            padding-top: 6rem;
+        }
+    }
+
+    &-btn {
+        @include mq($mq-desk) {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 3.7rem;
+            height: 3.7rem;
+            border: 0.2rem solid;
+            border-radius: 50%;
+            background-color: transparent;
+
+            &-prev {
+                border-color: $color-dark;
+                margin-right: 2.6rem;
+            }
+
+            &-next {
+                border-color: $color-red-light;
+            }
+        }
+    }
+}

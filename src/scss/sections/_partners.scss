@@ -4,7 +4,7 @@
         bottom: 4rem;
     }
 
-    @include mq($lg) {
+    @include mq($mq-desk) {
         padding: {
             top: 12rem;
             bottom: 12rem;
@@ -19,7 +19,7 @@
         border-top: 1.5px solid $color-grey;
         border-bottom: 1.5px solid $color-grey;
 
-        @include mq($lg) {
+        @include mq($mq-desk) {
             padding: {
                 top: 4rem;
                 bottom: 4rem;
@@ -30,7 +30,8 @@
     &__item {
         padding-top: 1.2rem;
 
-        @include mq($lg) {
+        @include mq($mq-tab) {
+            width: 25%;
             padding-top: 0;
         }
     }
@@ -39,7 +40,7 @@
         letter-spacing: -0.02rem;
         line-height: 1.4;
 
-        @include mq($lg) {
+        @include mq($mq-desk) {
             @include font-size(22.65);
         }
     }

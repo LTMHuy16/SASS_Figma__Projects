@@ -1,0 +1,34 @@
+.membership {
+    &__header {
+        padding-bottom: 4rem;
+
+        @include mq($mq-desk) {
+            padding-bottom: 6rem;
+        }
+    }
+
+    &__features {
+        margin-bottom: 4rem;
+
+        @include mq($mq-desk) {
+            margin-bottom: 6rem;
+        }
+    }
+
+    &__features {
+        padding: {
+            top: 4rem;
+            bottom: 4rem;
+        };
+    }
+
+    &__feature {
+        &-icon {
+            margin-bottom: 3rem;
+        }
+
+        &-title {
+            padding-bottom: 1rem;
+        }
+    }
+}

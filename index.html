@@ -27,13 +27,22 @@
                     </button>
 
                     <div class="header__logo col-lg-2">
-                        <picture>
-                            <img srcset="./src/image/logo.png 2x" alt="Logo" />
-                        </picture>
+                        <a href="#" class="header__logo-link">
+                            <picture>
+                                <img
+                                    srcset="./src/image/logo.png 2x"
+                                    alt="Logo"
+                                    width="100"
+                                    height="200"
+                                />
+                            </picture>
+                        </a>
                     </div>
 
-                    <div class="header__menu lg-flex items-lg-center flex-lg-1 js-header-menu">
-                        <button class="button--icon block ml-auto hide-desktop js-close-menu">
+                    <div class="header__navbar lg-flex items-lg-center flex-lg-1 js-header-menu">
+                        <button
+                            class="header__button-close button button--icon hide-desktop js-close-menu"
+                        >
                             <span>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -47,34 +56,39 @@
                                 </svg>
                             </span>
                         </button>
-                        <nav class="header__content lg-flex items-lg-center flex-lg-1">
-                            <ul class="header__navbar lg-flex flex-wrap">
-                                <li class="header__item">
-                                    <a class="header__link flex items-center" href="#">Episodes</a>
+                        <nav class="header__menu lg-flex items-lg-center flex-lg-1">
+                            <ul class="header__menu-list lg-flex">
+                                <li class="header__menu-item">
+                                    <a class="header__menu-link flex items-center" href="#"
+                                        >Episodes</a
+                                    >
                                 </li>
-                                <li class="header__item">
-                                    <a class="header__link flex items-center js-menu-link" href="#">
+                                <li class="header__menu-item">
+                                    <a
+                                        class="header__menu-link flex items-center js-menu-parent"
+                                        href="#"
+                                    >
                                         About
-                                        <span class="header__link-icon">
+                                        <span class="header__menu-arrow">
                                             <picture>
                                                 <img src="./src/image/arrow.svg" alt="" />
                                             </picture>
                                         </span>
                                     </a>
-                                    <ul class="header__sub">
+                                    <ul class="header__submenu">
                                         <li>
-                                            <a class="header__sub-link" href="#">About 1</a>
+                                            <a class="header__submenu-link" href="#">About 1</a>
                                         </li>
                                         <li>
-                                            <a class="header__sub-link" href="#">About 2</a>
+                                            <a class="header__submenu-link" href="#">About 2</a>
                                         </li>
                                         <li>
-                                            <a class="header__sub-link" href="#">About 3</a>
+                                            <a class="header__submenu-link" href="#">About 3</a>
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="header__item">
-                                    <a class="header__link flex items-center" href="#">More</a>
+                                <li class="header__menu-item">
+                                    <a class="header__menu-link flex items-center" href="#">More</a>
                                 </li>
                             </ul>
                             <div class="header__buttons ml-auto">
@@ -94,13 +108,13 @@
         </header>
 
         <main>
-            <section class="hero bg-pink">
-                <div class="container hero__decor hero__decor--right hero__decor--left">
-                    <div class="hero__content col-lg-6 mx-auto">
+            <section class="hero bg-pink hero__decor--left">
+                <div class="container hero__decor hero__decor--right">
+                    <div class="hero__content col-lg-6">
                         <h1 class="hero__heading text-heading text-center">
                             Your Daily <span class="text-red-light">Podcast</span>
                         </h1>
-                        <p class="hero__desc mx-auto text-center">
+                        <p class="hero__desc text-center">
                             We cover all kinds of categories and a weekly special guest.
                         </p>
                         <div class="flex items-center justify-center">
@@ -112,11 +126,11 @@
 
             <section class="slider bg-pink">
                 <div class="container">
-                    <ul class="js-active-carousel owl-carousel">
+                    <ul class="owl-carousel" id="topicsCarousel">
                         <li class="slider__item">
                             <picture class="slider__img">
                                 <img
-                                    class="cover-img"
+                                    class="img img--cover"
                                     srcset="./src/image/slider-1.jpg 2x"
                                     alt=""
                                 />
@@ -168,7 +182,7 @@
                         <li class="slider__item">
                             <picture class="slider__img">
                                 <img
-                                    class="cover-img"
+                                    class="img img--cover"
                                     srcset="./src/image/slider-2.jpg 2x"
                                     alt=""
                                 />
@@ -220,7 +234,7 @@
                         <li class="slider__item">
                             <picture class="slider__img">
                                 <img
-                                    class="cover-img"
+                                    class="img img--cover"
                                     srcset="./src/image/slider-3.jpg 2x"
                                     alt=""
                                 />
@@ -276,25 +290,25 @@
             <section class="partners bg-pink">
                 <div class="container">
                     <div class="partners__inner">
-                        <ul class="sm-flex flex-sm-wrap items-center">
-                            <li class="partners__item col-sm-6 col-md-3 text-center text-lg-left">
+                        <ul class="flex items-center">
+                            <li class="partners__item col-6 text-center text-lg-left">
                                 <span class="partners__text text-700">Supported by:</span>
                             </li>
-                            <li class="partners__item col-sm-6 col-md-3 flex justify-center">
+                            <li class="partners__item col-6 flex justify-center">
                                 <a href="#">
                                     <picture class="inline-block">
                                         <img src="./src/image/spotify.svg" alt="" />
                                     </picture>
                                 </a>
                             </li>
-                            <li class="partners__item col-sm-6 col-md-3 flex justify-center">
+                            <li class="partners__item col-6 flex justify-center">
                                 <a href="#">
                                     <picture class="inline-block">
                                         <img src="./src/image/postcard.svg" alt="" />
                                     </picture>
                                 </a>
                             </li>
-                            <li class="partners__item col-sm-6 col-md-3 flex justify-center">
+                            <li class="partners__item col-6 flex justify-center">
                                 <a href="#">
                                     <picture class="inline-block">
                                         <img src="./src/image/youtube.svg" alt="" />
@@ -306,52 +320,69 @@
                 </div>
             </section>
 
-            <section class="about">
+            <section class="about section">
                 <div class="container">
-                    <h2>Talk. Listen. Get inspired by every minute of it.</h2>
-                    <div class="ideas lg-flex items-center">
-                        <div class="col-lg-6">
-                            <picture>
-                                <img src="./src/image/thinking.svg" alt="" />
-                            </picture>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Exercitationem, minima ipsum? Voluptas dolores iusto aspernatur sint
-                                officiis, laborum consequatur vel!
-                            </p>
-                        </div>
-                        <div class="col-lg-6">
-                            <picture>
-                                <img src="./src/image/bulb.svg" alt="" />
-                            </picture>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Exercitationem, minima.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="quote">
-                        <div class="quote__icon">
-                            <picture>
-                                <img src="./src/image/comma.svg" alt="" />
-                            </picture>
-                        </div>
-                        <h3>One of the best daily podcasts that covers every topic on Spotify.</h3>
-                        <div class="quote__info">
-                            <div class="quote__author">
-                                <div class="quote__portrait">
-                                    <picture>
-                                        <img src="./src/image/quote-author.jpg" alt="" />
+                    <h2 class="about__header h1 section-header text-center">
+                        Talk. Listen. Get inspired by every minute of it.
+                    </h2>
+                    <div class="about__ideas md-flex">
+                        <div class="col-md-6">
+                            <div class="about__idea text-center">
+                                <div class="about__idea-icon">
+                                    <picture class="about__idea-picture">
+                                        <img
+                                            class="image--contain image--full"
+                                            src="./src/image/thinking.svg"
+                                            alt=""
+                                        />
                                     </picture>
                                 </div>
-                                <span class="quote__name">John Smith,</span>
-                                <div class="quote__position">
-                                    <div class="quote__position-logo">
-                                        <picture>
-                                            <img src="./src/image/mini-sportify.svg" alt="" />
-                                        </picture>
-                                        <span>Social Community Manager</span>
-                                    </div>
+                                <p class="about__idea-desc">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Curabitur ac ultrices odio.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="about__idea about__idea--right text-center">
+                                <div class="about__idea-icon">
+                                    <picture class="about__idea-picture">
+                                        <img
+                                            class="image--contain image--full"
+                                            src="./src/image/bulb.svg"
+                                            alt=""
+                                        />
+                                    </picture>
+                                </div>
+                                <p class="about__idea-desc">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Curabitur ac ultrices odio.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about__quote about__quote-decor-left about__quote-decor-right">
+                        <div class="about__quote-inner text-center">
+                            <div class="about__quote-icon">
+                                <picture>
+                                    <img src="./src/image/comma.svg" alt="" />
+                                </picture>
+                            </div>
+                            <h3 class="about__quote-content h2">
+                                One of the best daily podcasts that covers every topic on Spotify.
+                            </h3>
+                            <div class="about__author lg-flex items-center justify-center">
+                                <div class="about__author-info flex items-center justify-center">
+                                    <picture class="about__author-portrait">
+                                        <img src="./src/image/quote-author.jpg" alt="" />
+                                    </picture>
+                                    <span class="about__author-name text-sm">John Smith,</span>
+                                </div>
+                                <div class="about__author-company flex items-center justify-center">
+                                    <picture class="about__author-logo">
+                                        <img src="./src/image/mini-sportify.svg" alt="" />
+                                    </picture>
+                                    <span class="text-sm text-700">Social Community Manager</span>
                                 </div>
                             </div>
                         </div>
@@ -359,102 +390,315 @@
                 </div>
             </section>
 
-            <section class="testimonial">
-                <h2>What our listeners say</h2>
-                <p>Their experience throughout every platform</p>
+            <section class="testimonial section">
+                <div class="container">
+                    <div class="testimonial__header text-center section__header">
+                        <h2 class="section__title h1">What our listeners say</h2>
+                        <p class="h3">Their experience throughout every platform</p>
+                    </div>
 
-                <div class="tesimonial__list">
-                    <div class="testimonial__item">
-                        <picture>
-                            <img src="./src/image/comma.svg" alt="" />
-                        </picture>
-                        <p>
-                            Lorem ipsum dolor sit amet consectet piscing elit, sed do eiusmod tempor
-                            incidi ut labore et dolore magna aliqua.
-                        </p>
-                        <div class="tesimonial__client">
-                            <div class="tesimonial__poirtrait">
-                                <picture>
-                                    <img src="./src/image/face-1.svg" alt="" />
+                    <div class="owl-left-overflow">
+                        <div class="owl-container owl-carousel" id="testimonialCarousel">
+                            <div class="testimonial__card">
+                                <picture class="testimonial__card-comma">
+                                    <img src="./src/image/comma.svg" alt="" />
                                 </picture>
+                                <p class="testimonial__card-content h3">
+                                    Lorem ipsum dolor sit amet consectet piscing elit, sed do
+                                    eiusmod tempor incidi ut labore et dolore magna aliqua.
+                                </p>
+                                <div class="testimonial__card-info flex items-center">
+                                    <picture class="testimonial__card-portrait">
+                                        <img srcset="./src/image/customer-1.jpg 2x" alt="" />
+                                    </picture>
+                                    <span class="testimonial__card-name text-sm">Luna Loven,</span>
+                                    <div class="testimonial__card-socials">
+                                        <picture class="testimonial__card-icon">
+                                            <img src="./src/image/mini-sportify.svg" alt="" />
+                                        </picture>
+                                    </div>
+                                    <span class="text-sm text-700">Spotify</span>
+                                </div>
                             </div>
-                            <span class="testimonial__name">Luna lovegood,</span>
-                            <div class="testimonial__platform">
-                                <picture>
-                                    <img src="./src/image/mini-sportify.svg" alt="" />
+                            <div class="testimonial__card">
+                                <picture class="testimonial__card-comma">
+                                    <img src="./src/image/comma.svg" alt="" />
                                 </picture>
-                                <span class="testimonial__platform-name">Spotify</span>
+                                <p class="testimonial__card-content h3">
+                                    Lorem ipsum dolor sit amet consectet piscing elit, sed do
+                                    eiusmod tempor incidi ut labore et dolore magna aliqua.
+                                </p>
+                                <div class="testimonial__card-info flex items-center">
+                                    <picture class="testimonial__card-portrait">
+                                        <img srcset="./src/image/customer-2.jpg 2x" alt="" />
+                                    </picture>
+                                    <span class="testimonial__card-name text-sm">Emily Blunt,</span>
+                                    <div class="testimonial__card-socials">
+                                        <picture class="testimonial__card-icon">
+                                            <img src="./src/image/gg-mini-black.svg" alt="" />
+                                        </picture>
+                                    </div>
+                                    <span class="text-sm text-700">Spotify</span>
+                                </div>
+                            </div>
+                            <div class="testimonial__card">
+                                <picture class="testimonial__card-comma">
+                                    <img src="./src/image/comma.svg" alt="" />
+                                </picture>
+                                <p class="testimonial__card-content h3">
+                                    Lorem ipsum dolor sit amet consectet piscing elit, sed do
+                                    eiusmod tempor incidi ut labore et dolore magna aliqua.
+                                </p>
+                                <div class="testimonial__card-info flex items-center">
+                                    <picture class="testimonial__card-portrait">
+                                        <img srcset="./src/image/customer-1.jpg 2x" alt="" />
+                                    </picture>
+                                    <span class="testimonial__card-name text-sm"
+                                        >Luna lovegood,</span
+                                    >
+                                    <div class="testimonial__card-socials">
+                                        <picture class="testimonial__card-icon">
+                                            <img src="./src/image/mini-sportify.svg" alt="" />
+                                        </picture>
+                                    </div>
+                                    <span class="text-sm text-700">Spotify</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section class="membership">
+            <section class="membership section">
                 <div class="container">
-                    <div class="section-header">
-                        <h2>Membership benefits</h2>
+                    <div class="membership__header section__header text-center">
+                        <h2 class="h1 section__title">Membership benefits</h2>
                         <p>Become our sponsor and get all benefits</p>
                     </div>
-                    <div class="mebership__features">
-                        <div class="mebership__features-item">
-                            <picture>
+                    <div class="membership__features flex flex--gutter">
+                        <div class="membership__feature col-sm-6 col-lg-4 text-center">
+                            <picture class="membership__feature-icon">
                                 <img src="./src/image/scribble.svg" alt="" />
                             </picture>
-                            <h3>Topic by Request</h3>
-                            <p>
+                            <h3 class="membership__feature-title">Topic by Request</h3>
+                            <p class="membership__feature-desc">
+                                Lorem ipsum dolor sit amet consectet pis cing elit, sed do eiusmod
+                                tempor.
+                            </p>
+                        </div>
+                        <div class="membership__feature col-sm-6 col-lg-4 text-center">
+                            <picture class="membership__feature-icon">
+                                <img src="./src/image/scribble.svg" alt="" />
+                            </picture>
+                            <h3 class="membership__feature-title">Exclusive Content</h3>
+                            <p class="membership__feature-desc">
+                                Lorem ipsum dolor sit amet consectet pis cing elit, sed do eiusmod
+                                tempor.
+                            </p>
+                        </div>
+                        <div class="membership__feature col-sm-6 col-lg-4 text-center">
+                            <picture class="membership__feature-icon">
+                                <img src="./src/image/scribble.svg" alt="" />
+                            </picture>
+                            <h3 class="membership__feature-title">Join the Community</h3>
+                            <p class="membership__feature-desc">
+                                Lorem ipsum dolor sit amet consectet pis cing elit, sed do eiusmod
+                                tempor.
+                            </p>
+                        </div>
+                        <div class="membership__feature col-sm-6 col-lg-4 text-center">
+                            <picture class="membership__feature-icon">
+                                <img src="./src/image/scribble.svg" alt="" />
+                            </picture>
+                            <h3 class="membership__feature-title">Livestreaming Access</h3>
+                            <p class="membership__feature-desc">
+                                Lorem ipsum dolor sit amet consectet pis cing elit, sed do eiusmod
+                                tempor.
+                            </p>
+                        </div>
+                        <div class="membership__feature col-sm-6 col-lg-4 text-center">
+                            <picture class="membership__feature-icon">
+                                <img src="./src/image/scribble.svg" alt="" />
+                            </picture>
+                            <h3 class="membership__feature-title">Exclusive Episodes & Merch</h3>
+                            <p class="membership__feature-desc">
+                                Lorem ipsum dolor sit amet consectet pis cing elit, sed do eiusmod
+                                tempor.
+                            </p>
+                        </div>
+                        <div class="membership__feature col-sm-6 col-lg-4 text-center">
+                            <picture class="membership__feature-icon">
+                                <img src="./src/image/scribble.svg" alt="" />
+                            </picture>
+                            <h3 class="membership__feature-title">And much more!</h3>
+                            <p class="membership__feature-desc">
                                 Lorem ipsum dolor sit amet consectet pis cing elit, sed do eiusmod
                                 tempor.
                             </p>
                         </div>
                     </div>
 
-                    <div class="membership__buttons">
+                    <div class="membership__buttons flex justify-center">
                         <a href="#" class="button button--primary text-upercase">See Pricing</a>
                     </div>
                 </div>
             </section>
 
-            <section class="content">
+            <section class="episodes section bg-pink">
                 <div class="container">
-                    <div class="section-header">
-                        <h2>Recent Episodes</h2>
-                        <p>Available on your favorite platform</p>
+                    <div class="episodes__header section__header text-center">
+                        <h2 class="section__title h1">Recent Episodes</h2>
+                        <p class="h3">Available on your favorite platform</p>
                     </div>
 
-                    <div class="content__cards lg-flex">
-                        <div class="content__card col-lg-6">
-                            <div class="content__card-inner">
-                                <div class="content__card-top">
-                                    <div class="content__card-img">
-                                        <picture>
-                                            <img src="./src/image/tesla.png" alt="" />
+                    <div class="episodes__cards lg-flex lg-flex--gutter">
+                        <div class="col-md-6">
+                            <div class="episodes__card">
+                                <div class="episodes__card-top">
+                                    <div class="episodes__card-image">
+                                        <picture class="episodes__card-picture">
+                                            <img
+                                                class="image--full-width"
+                                                src="./src/image/tesla.png"
+                                                alt=""
+                                            />
                                         </picture>
                                     </div>
-                                    <div class="content__card-info">
-                                        <span>Eps. 5</span>
-                                        <h3>Tesla Autopilot Controversy</h3>
-                                        <div class="content__card-line"></div>
-                                        <p class="content__card-desc">
+                                    <div class="episodes__card-info">
+                                        <div class="episodes__card-heading">
+                                            <span class="text-red-light text-700">Eps. 5</span>
+                                            <h3 class="h3-main text-red-light">
+                                                Tesla Autopilot Controversy
+                                            </h3>
+                                        </div>
+                                        <p class="episodes__card-desc">
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                             Curabitur ac ultrices odio.
                                         </p>
                                     </div>
                                 </div>
-                                <div class="content__card-bottom">
-                                    <div class="content__card-tags">
-                                        <a href="#" class="content__card-tag">automation</a>
-                                        <a href="#" class="content__card-tag">tech</a>
+                                <div class="episodes__card-bottom">
+                                    <div class="episodes__card-tags">
+                                        <a href="#" class="episodes__card-tag text-ssm text-grey"
+                                            >automation</a
+                                        >
+                                        <a href="#" class="episodes__card-tag text-ssm text-grey"
+                                            >tech</a
+                                        >
                                     </div>
-                                    <div class="content__card-hosted">
-                                        <span>Hosted by: </span>
-                                        <div class="content__card-authors">
-                                            <div class="content__card-author">
+                                    <div class="episodes__card-hosted">
+                                        <span class="text-ssm text-700">Hosted by: </span>
+                                        <div class="episodes__card-authors">
+                                            <div class="episodes__card-author">
                                                 <picture>
                                                     <img src="./src/image/hoster-1.jpg" alt="" />
                                                 </picture>
                                             </div>
-                                            <div class="content__card-author">
+                                            <div class="episodes__card-author">
+                                                <picture>
+                                                    <img src="./src/image/hoster-2.jpg" alt="" />
+                                                </picture>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="episodes__card">
+                                <div class="episodes__card-top">
+                                    <div class="episodes__card-image">
+                                        <picture class="episodes__card-picture">
+                                            <img
+                                                class="image--full-width"
+                                                src="./src/image/tesla.png"
+                                                alt=""
+                                            />
+                                        </picture>
+                                    </div>
+                                    <div class="episodes__card-info">
+                                        <div class="episodes__card-heading">
+                                            <span class="text-red-light text-700">Eps. 5</span>
+                                            <h3 class="h3-main text-red-light">
+                                                Tesla Autopilot Controversy
+                                            </h3>
+                                        </div>
+                                        <p class="episodes__card-desc">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Curabitur ac ultrices odio.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episodes__card-bottom">
+                                    <div class="episodes__card-tags">
+                                        <a href="#" class="episodes__card-tag text-ssm text-grey"
+                                            >automation</a
+                                        >
+                                        <a href="#" class="episodes__card-tag text-ssm text-grey"
+                                            >tech</a
+                                        >
+                                    </div>
+                                    <div class="episodes__card-hosted">
+                                        <span class="text-ssm text-700">Hosted by: </span>
+                                        <div class="episodes__card-authors">
+                                            <div class="episodes__card-author">
+                                                <picture>
+                                                    <img src="./src/image/hoster-1.jpg" alt="" />
+                                                </picture>
+                                            </div>
+                                            <div class="episodes__card-author">
+                                                <picture>
+                                                    <img src="./src/image/hoster-2.jpg" alt="" />
+                                                </picture>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="episodes__card">
+                                <div class="episodes__card-top">
+                                    <div class="episodes__card-image">
+                                        <picture class="episodes__card-picture">
+                                            <img
+                                                class="image--full-width"
+                                                src="./src/image/tesla.png"
+                                                alt=""
+                                            />
+                                        </picture>
+                                    </div>
+                                    <div class="episodes__card-info">
+                                        <div class="episodes__card-heading">
+                                            <span class="text-red-light text-700">Eps. 5</span>
+                                            <h3 class="h3-main text-red-light">
+                                                Tesla Autopilot Controversy
+                                            </h3>
+                                        </div>
+                                        <p class="episodes__card-desc">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Curabitur ac ultrices odio.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="episodes__card-bottom">
+                                    <div class="episodes__card-tags">
+                                        <a href="#" class="episodes__card-tag text-ssm text-grey"
+                                            >automation</a
+                                        >
+                                        <a href="#" class="episodes__card-tag text-ssm text-grey"
+                                            >tech</a
+                                        >
+                                    </div>
+                                    <div class="episodes__card-hosted">
+                                        <span class="text-ssm text-700">Hosted by: </span>
+                                        <div class="episodes__card-authors">
+                                            <div class="episodes__card-author">
+                                                <picture>
+                                                    <img src="./src/image/hoster-1.jpg" alt="" />
+                                                </picture>
+                                            </div>
+                                            <div class="episodes__card-author">
                                                 <picture>
                                                     <img src="./src/image/hoster-2.jpg" alt="" />
                                                 </picture>
@@ -466,7 +710,7 @@
                         </div>
                     </div>
 
-                    <div class="content__buttons">
+                    <div class="content__buttons flex justify-center">
                         <a href="#" class="button button--primary">BROWSE ALL EPISODES</a>
                     </div>
                 </div>
@@ -479,7 +723,7 @@
                         <p>Get exclusive episodes, merch and more</p>
                     </div>
 
-                    <div class="service__list lg-flex flex-lg-wrap">
+                    <div class="service__list lg-flex">
                         <div class="col-lg-4">
                             <div class="price__info">
                                 <h3 class="price__name">Member</h3>
@@ -511,7 +755,7 @@
 
             <section class="blogs">
                 <div class="container">
-                    <div class="lg-flex flex-wrap">
+                    <div class="md-flex">
                         <div class="col-lg-6">
                             <div class="blog__card">
                                 <div class="blog__image">

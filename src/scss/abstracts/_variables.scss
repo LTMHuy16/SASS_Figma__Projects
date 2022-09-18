@@ -42,25 +42,26 @@ $font-body-weight: 500;
 
 //========= BREAKPOINTS ============
 
-$sm: 480px;
-$md: 768px;
-$lg: 960px;
-$xl: 1200px;
-$xxl: 1440px;
+$mq-mob: 480px;
+$mq-mob-small: 420px;
+$mq-mob-med: 560px;
+$mq-mob-lrg: 640px;
+
+$mq-tab: 768px;
+$mq-tab-sml: 820px;
+$mq-mob-med: 880px;
+$mq-tab-lrg: 920px;
+
+$mq-desk: 960px;
+$mq-desk-sml: 1024px;
+$mq-desk-med: 1280px;
+$mq-desk-lrg: 1440px;
 
 // breakpoints to render grid system
 $breakpoints: (
     "": 0,
-    "sm-": $sm,
-    "md-": $md,
-    "lg-": $lg,
-);
-
-/* Breakpoints will be added spacing classes */
-$spacing-breakpoints: (
-    "": 0,
-    "md-": $md,
-    "lg-": $lg,
+    "md-": $mq-tab,
+    "lg-": $mq-desk,
 );
 
 //========= Z-INDEX ============

@@ -1,4 +1,4 @@
-class Menu {
+class Header {
     constructor() {
         this.body = document.querySelector("body");
         this.header = document.querySelector(".js-header");
@@ -6,7 +6,7 @@ class Menu {
         this.openButton = document.querySelector(".js-open-menu");
         this.closeButton = document.querySelector(".js-close-menu");
         this.overlay = document.querySelector(".js-overlay");
-        this.menuLinks = document.querySelectorAll(".js-menu-link");
+        this.menuLinks = document.querySelectorAll(".js-menu-parent");
 
         this.bindEvents();
     }
@@ -60,4 +60,4 @@ class Menu {
     }
 }
 
-new Menu();
+new Header();

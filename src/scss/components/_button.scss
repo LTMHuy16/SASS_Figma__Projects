@@ -2,7 +2,6 @@
     @include font-size(14, 1.2);
     display: inline-block;
     padding: 1.1rem 2.4rem;
-    box-shadow: $box-shadow-button;
     border-radius: 8px;
     border: 1px solid transparent;
     cursor: pointer;
@@ -11,27 +10,25 @@
     /* BUTTON SIZE */
 
     &--small {
-        
     }
 
     &--large {
         padding: 1rem 1.4rem;
 
-        @include mq($lg) {
+        @include mq($mq-desk) {
             padding: {
                 left: 3rem;
                 right: 3rem;
-            };
+            }
         }
 
-        @include mq($xl) {
+        @include mq($mq-desk-med) {
             padding: {
-                left: 8.1rem;
+            left: 8.1rem;
                 right: 8.1rem;
-            };
+            }
         }
     }
-
 
     /* BUTTON SHAPE */
 
@@ -40,18 +37,30 @@
     &--primary {
         background-color: $bg-button-primary;
         color: $color-button-primary;
+        box-shadow: $box-shadow-button;
+
+        &:hover {
+            background-color: $color-button-primary;
+            color: $color-dark;
+            border-color: $bg-button-primary;
+        }
     }
 
     &--second {
         border: 2px solid $border-button;
         background-color: transparent;
         color: $color-dark;
+
+        &:hover {
+            background-color: $bg-button-primary;
+            color: $color-button-primary;
+        }
     }
 
     &--icon {
-        font-size: 0;
+        @include font-size(0, 0);
         margin: 0;
         padding: 0;
-        background-color: transparent;
+        background: none;
     }
 }

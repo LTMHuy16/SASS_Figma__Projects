@@ -38,10 +38,15 @@
     }
 
     &__title {
-        @include font-size(26, 1.2);
+        margin-top: auto;
+        @include font-size(20, 1.2);
         letter-spacing: -0.08rem;
 
-        @include mq($lg) {
+        @include mq($mq-mob) {
+            @include font-size(26, 1.2);
+        }
+
+        @include mq($mq-desk) {
             @include font-size(36.65);
         }
     }

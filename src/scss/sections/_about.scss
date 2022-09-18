@@ -1,3 +1,156 @@
 .about {
-    
+    overflow-x: hidden;
+
+    &__header {
+        padding-bottom: 4rem;
+
+        @include mq($mq-desk) {
+            padding-bottom: 10rem;
+        }
+    }
+
+    &__ideas {
+        padding-bottom: 4rem;
+
+        @include mq($mq-desk) {
+            padding-bottom: 12rem;
+        }
+    }
+
+    &__idea {
+        max-width: 47.2rem;
+
+        @include mq($mq-tab, max) {
+            padding-bottom: 2rem;
+            margin: {
+                right: auto;
+                left: auto;
+            }
+        }
+
+        &--right {
+            margin-left: auto;
+        }
+
+        &-icon {
+            max-width: 16rem;
+            margin: {
+                right: auto;
+                bottom: 2rem;
+                left: auto;
+            }
+
+            @include mq($mq-desk) {
+                max-width: 276px;
+                margin-bottom: 4rem;
+            }
+        }
+
+        &-picture {
+            @include img-ratio($ratio--1-1);
+        }
+
+        &-desc {
+            padding: {
+                left: 0.4rem;
+                right: 0.4rem;
+            }
+        }
+    }
+
+    &__quote {
+        position: relative;
+        padding: {
+            top: 4rem;
+            bottom: 4rem;
+        }
+        border-radius: 0.8rem;
+        background-color: $color-pink;
+
+        &-decor {
+            &-left {
+                &::after {
+                    @include position(absolute, null, null, 5rem, 0);
+                    content: "";
+                    transform: translateX(-50%);
+                    background: url(../../image/author-decor-left.svg) no-repeat;
+                    background-size: contain;
+                    width: 8rem;
+                    height: 8rem;
+                    pointer-events: none;
+
+                    @include mq($mq-desk) {
+                        width: 12rem;
+                        height: 12rem;
+                    }
+                }
+            }
+
+            &-right {
+                &::before {
+                    @include position(absolute, 0, 0, null, null);
+                    content: "";
+                    transform: translate(50%, -50%);
+                    background: url(../../image/author-decor-right.svg) no-repeat;
+                    background-size: contain;
+                    width: 12rem;
+                    height: 12rem;
+                    pointer-events: none;
+
+                    @include mq($mq-desk) {
+                        width: 20rem;
+                        height: 20rem;
+                    }
+                }
+            }
+        }
+
+        &-inner {
+            max-width: 65rem;
+            margin: {
+                left: auto;
+                right: auto;
+            }
+        }
+
+        &-content {
+            @include mq($mq-desk) {
+                @include font-size(35);
+            }
+        }
+
+        &-icon {
+            padding-bottom: 3rem;
+        }
+
+        &-content {
+            padding-bottom: 4rem;
+        }
+    }
+
+    &__author {
+        &-portrait {
+            width: 4.8rem;
+            height: 4.8rem;
+            border-radius: 50%;
+            overflow: hidden;
+            background-color: $color-grey;
+            margin-bottom: 1rem;
+
+            @include mq($mq-desk) {
+                margin-bottom: 0;
+            }
+        }
+
+        &-name {
+            margin: {
+                right: 1rem;
+                left: 1rem;
+            }
+        }
+
+        &-logo {
+            margin-right: 1rem;
+        }
+    }
 }

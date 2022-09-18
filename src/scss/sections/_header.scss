@@ -1,25 +1,49 @@
 .header {
     $self: &;
 
-    @include mq($lg, max) {
+    padding: {
+        top: 1.2rem;
+        bottom: 1.2rem;
+    }
+    transition: $transition-base;
+
+    &.fixed {
+        @include position(fixed, 0, 0, null, 0);
+        z-index: $z-index-fixed;
         padding: {
-            top: 1.8rem;
-            bottom: 1.8rem;
+            top: 0.4rem;
+            bottom: 0.4rem;
+        }
+        background-color: $color-light;
+        box-shadow: $box-shadow-navbar;
+    }
+
+    &__logo {
+        margin: {
+            left: auto;
+            right: auto;
         }
 
-        &__logo {
+        &-link {
+            display: block;
             max-width: 5rem;
-            margin: {
-                left: auto;
-                right: auto;
+
+            @include mq($mq-desk) {
+                max-width: 7.4rem;
             }
         }
+    }
 
-        &__toggle {
-            padding: 0.4rem;
+    &__toggle {
+        padding: 0.4rem;
+
+        @include mq($mq-desk) {
+            display: none;
         }
+    }
 
-        &__menu {
+    &__navbar {
+        @include mq($mq-desk, max) {
             @include position(fixed, 0, null, 0, -40rem);
             z-index: $z-index-fixed;
             width: 100vw;
@@ -28,141 +52,155 @@
             background-color: $color-light;
             box-shadow: $box-shadow-navbar;
             transition: $transition-base;
+        }
 
-            &.is-open {
+        &.is-open {
+            @include mq($mq-desk, max) {
                 left: 0;
             }
         }
+    }
 
-        &__navbar {
+    &__button-close {
+        @include position(absolute, 2.2rem, 4rem);
+        padding: 0.4rem;
+
+        @include mq($mq-desk) {
+            display: none;
+        }
+    }
+
+    &__menu {
+        padding: {
+            bottom: 2rem;
+            top: 2rem;
+        }
+
+        @include mq($mq-desk) {
             padding: {
-                bottom: 2rem;
-                top: 2rem;
+                top: 0;
+                bottom: 0;
             }
         }
 
-        &__link {
-            @include font-size(20);
+        &-list {
+            padding-bottom: 2rem;
+
+            @include mq($mq-desk) {
+                padding-bottom: 0;
+            }
+        }
+
+        &-item {
+            position: relative;
+
+            &:not(:last-child) {
+                margin-right: 6rem;
+            }
+
+            &:hover #{$self}__submenu {
+                @include mq($mq-desk) {
+                    pointer-events: auto;
+                    visibility: visible;
+                    height: auto;
+                    padding: {
+                        top: 1.2rem;
+                        bottom: 1.2rem;
+                    }
+                }
+            }
+        }
+
+        &-link {
+            display: flex;
             padding: {
                 top: 1.2rem;
                 bottom: 1.2rem;
             }
 
-            &-icon {
-                padding-left: 1rem;
+            @include mq($mq-desk) {
+                @include font-size(16);
+                font-weight: 700;
             }
         }
 
-        &__sub {
-            overflow: hidden;
-            height: 0;
-            padding: {
-                left: 1.8rem;
-            }
-            pointer-events: none;
-            transition: height 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        &-arrow {
+            padding-left: 1rem;
 
-            &.is-open {
+            @include mq($mq-desk) {
+                display: flex;
+                justify-content: center;
+                line-height: 1.6rem;
+                height: 1.6rem;
+                width: 1.6rem;
+                border-radius: 50%;
+                border: 1.5px solid rgba(0, 0, 0, 0.4);
+                padding: 0;
+                margin-left: 0.5rem;
+            }
+        }
+    }
+
+    &__submenu {
+        overflow: hidden;
+        height: 0;
+        padding: {
+            left: 1.8rem;
+        }
+        visibility: hidden;
+        pointer-events: none;
+        transition: 0.2s ease;
+
+        @include mq($mq-desk) {
+            @include position(absolute, 100%, null, null, 0);
+            z-index: 10;
+            height: auto;
+            min-width: 12rem;
+            padding: {
+                top: 1.2rem;
+                bottom: 1.2rem;
+                right: 1.2rem;
+            }
+            background-color: $color-light;
+            border-radius: 0.6rem;
+        }
+
+        &.is-open {
+            @include mq($mq-desk, max) {
+                pointer-events: auto;
+                visibility: visible;
                 height: auto;
                 padding: {
                     top: 1.2rem;
                     bottom: 1.2rem;
                 }
-                pointer-events: auto;
-            }
-
-            &-link {
-                @include font-size(20);
-                display: inline-block;
-                padding: {
-                    top: 1.2rem;
-                    bottom: 1.2rem;
-                }
             }
         }
 
-        &__button {
-            &:not(:last-child) {
-                margin-bottom: 1.6rem;
+        &-link {
+            display: flex;
+            padding: {
+                top: 1.2rem;
+                bottom: 1.2rem;
             }
         }
     }
 
-    @include mq($lg) {
-        padding: {
-            top: 1.2rem;
-            bottom: 1.2rem;
+    &__buttons {
+        @include mq($mq-desk) {
+            margin-left: auto;
         }
-        transition: $transition-base;
+    }
 
-        &.fixed {
-            @include position(fixed, 0, 0, null, 0);
-            z-index: $z-index-fixed;
-            padding: {
-                top: 0.4rem;
-                bottom: 0.4rem;
-            }
-            background-color: $color-light;
-            box-shadow: $box-shadow-navbar;
-        }
+    &__button {
+        &:not(:last-child) {
+            margin-bottom: 1.6rem;
 
-        &__logo {
-            margin-left: 0;
-        }
-
-        &__item {
-            position: relative;
-
-            &:hover #{$self}__sub {
-                opacity: 1;
-                pointer-events: auto;
-            }
-        }
-
-        &__link {
-            padding: {
-                left: 1.6rem;
-                right: 1.6rem;
-            }
-            font-weight: 700;
-
-            &-icon {
-                margin-left: 0.5rem;
-                padding: 0.33rem;
-                border-radius: 50%;
-                border: 1.5px solid rgba(0, 0, 0, 0.4);
-            }
-        }
-
-        &__sub {
-            @include position(absolute, 100%, null, null, 0);
-            z-index: $z-index-fixed;
-            min-width: 12rem;
-            padding: {
-                top: 1.2rem;
-                right: 1.6rem;
-                bottom: 1.2rem;
-                left: 1.6rem;
-            }
-            border-radius: 6px;
-            background-color: $color-light;
-            opacity: 0;
-            pointer-events: none;
-            box-shadow: $box-shadow-submenu;
-            transition: opacity 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
-
-            &-link {
-                display: inline-block;
-                padding: {
-                    top: 0.4rem;
-                    bottom: 0.4rem;
+            @include mq($mq-desk) {
+                margin: {
+                    right: 2rem;
+                    bottom: 0;
                 }
-            }
-        }
-
-        &__button {
-            &:not(:last-child) {
-                margin-right: 2rem;
             }
         }
     }

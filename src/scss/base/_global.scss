@@ -8,7 +8,7 @@ body {
     font-family: $font-body;
     font-weight: $font-body-weight;
 
-    @include mq($lg) {
+    @include mq($mq-desk) {
         @include font-size(16);
     }
 }
@@ -28,6 +28,7 @@ picture {
 
 img {
     max-width: 100%;
+    height: auto;
 }
 
 button {
